@@ -1,0 +1,23 @@
+.button {
+  width: 185px;
+  height: 50px;
+	background-color: var(--first-color-dark);
+	border: 2px solid var(--first-color-dark);
+	box-shadow: var(--btn-shadow);
+	border-radius: 35px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-weight: var(--font-semi-bold);
+	color: var(--color-white);
+	font-family: var(--body-font);
+}
+.alt {
+	background-color: transparent;
+	color: var(--first-color-dark);
+	i {
+		font-size: 1.75rem;
+		margin-right: 8px;
+	}
+}
