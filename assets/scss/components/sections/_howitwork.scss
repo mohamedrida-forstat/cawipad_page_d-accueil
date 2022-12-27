@@ -28,6 +28,9 @@
 			background-color: white;
 			padding: 25px;
 			box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.15);
+			@include mediaXXS {
+				padding-inline: 10px;
+			}
 			.work__title {
 				font-family: var(--title-font);
 				font-weight: var(--font-bold);
@@ -38,11 +41,21 @@
 				letter-spacing: 0.03em;
 				margin-bottom: 25px;
 				line-height: 32px;
+				@include mediaXXS {
+					font-size: 20px;
+					letter-spacing: 0;
+					margin-bottom: 15px;
+				}
 			}
 			.work__image {
 				margin-inline: auto;
 				display: block;
 				margin-bottom: 25px;
+				@include mediaXXS {
+					width: 100%;
+					height: 180px;
+					margin-bottom: 15px;
+				}
 			}
 			.work__paragraph {
 				text-align: center;

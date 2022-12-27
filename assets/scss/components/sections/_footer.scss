@@ -18,6 +18,9 @@
 		width: 120px;
 		height: 55px;
 		margin-left: 75px;
+		@include mediaXXS {
+			margin-left: 20px;
+		}
 	}
 	.flex__footer {
 		margin-top: 60px;

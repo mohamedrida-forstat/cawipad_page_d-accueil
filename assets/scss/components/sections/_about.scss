@@ -23,6 +23,9 @@
 		}
 		.about__image {
 			margin-inline: auto;
+			@include mediaXXS {
+				width: 100%;
+			}
 		}
 	}
 }

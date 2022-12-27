@@ -54,6 +54,11 @@ a {
   background-color: var(--first-color-very-light);
   position: relative;
 }
+@media (max-width: 430px) {
+  .full-height {
+    padding-top: 10px !important;
+  }
+}
 .full-height::after {
   content: "";
   position: absolute;
@@ -114,6 +119,11 @@ a {
 
 .container {
   padding-inline: 20px;
+}
+@media (max-width: 430px) {
+  .container {
+    padding-inline: 10px;
+  }
 }
 
 .button {
@@ -204,6 +214,15 @@ header .nav__toggle {
   width: -moz-max-content;
   width: max-content;
 }
+@media (max-width: 430px) {
+  .home__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 20px;
+  }
+}
 
 .about {
   margin-top: 60px;
@@ -233,6 +252,11 @@ header .nav__toggle {
 }
 .about .flex__about .about__image {
   margin-inline: auto;
+}
+@media (max-width: 430px) {
+  .about .flex__about .about__image {
+    width: 100%;
+  }
 }
 
 .works {
@@ -268,6 +292,11 @@ header .nav__toggle {
   -webkit-box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.15);
           box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.15);
 }
+@media (max-width: 430px) {
+  .works .works__content .work {
+    padding-inline: 10px;
+  }
+}
 .works .works__content .work .work__title {
   font-family: var(--title-font);
   font-weight: var(--font-bold);
@@ -279,10 +308,24 @@ header .nav__toggle {
   margin-bottom: 25px;
   line-height: 32px;
 }
+@media (max-width: 430px) {
+  .works .works__content .work .work__title {
+    font-size: 20px;
+    letter-spacing: 0;
+    margin-bottom: 15px;
+  }
+}
 .works .works__content .work .work__image {
   margin-inline: auto;
   display: block;
   margin-bottom: 25px;
+}
+@media (max-width: 430px) {
+  .works .works__content .work .work__image {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 15px;
+  }
 }
 .works .works__content .work .work__paragraph {
   text-align: center;
@@ -497,6 +540,11 @@ header .nav__toggle {
   width: 120px;
   height: 55px;
   margin-left: 75px;
+}
+@media (max-width: 430px) {
+  .footer .footer__logo {
+    margin-left: 20px;
+  }
 }
 .footer .flex__footer {
   margin-top: 60px;

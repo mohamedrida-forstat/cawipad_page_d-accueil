@@ -1,0 +1,27 @@
+// ======== Start Media Queries Mixins ==========
+@mixin mediaXXS {
+	@media (max-width: 430px) {
+		@content;
+	}
+}
+@mixin mediaXS {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+@mixin mediaSM {
+	@media (min-width: 769px) {
+		@content;
+	}
+}
+@mixin mediaMD {
+	@media (min-width: 992px) {
+		@content;
+	}
+}
+@mixin mediaLG {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+// ======== End Media Queries Mixins ==========

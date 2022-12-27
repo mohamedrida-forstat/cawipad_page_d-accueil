@@ -25,6 +25,9 @@ a {
 	height: 100vh;
 	background-color: var(--first-color-very-light);
 	position: relative;
+	@include mediaXXS {
+		padding-top: 10px !important;
+	}
 	&::after {
 		content: '';
 		position: absolute;
