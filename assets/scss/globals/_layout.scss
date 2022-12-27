@@ -23,6 +23,18 @@ a {
 
 .full-height {
 	height: 100vh;
+	background-color: var(--first-color-very-light);
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 50px;
+		background-color: var(--first-color-very-light);
+		bottom: -50px;
+		-webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+		clip-path: polygon(0 0, 0 100%, 100% 0);
+	}
 }
 .section {
 	padding-block: 2rem;
