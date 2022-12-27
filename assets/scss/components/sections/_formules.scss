@@ -1,0 +1,45 @@
+.flex__formules {
+	margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+	.formule {
+		width: 303px;
+    height: 300px;
+		margin-inline: auto;
+		border-radius: 50px;
+		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+		background-color: white;
+		padding: 30px 15px;
+    &:nth-of-type(2) .formule__icon {
+      margin-left: 10px;
+    }
+		.formule__title {
+      margin-block: 20px;
+			font-size: 24px;
+			font-family: var(--body-font);
+      color: var(--first-color-dark);
+      font-weight: var(--font-semi-bold);
+      letter-spacing: 0.05em;
+      margin-left: 20px;
+      text-transform: capitalize;
+		}
+    .formule__paragraph {
+      font-family: var(--paragraph-font);
+      letter-spacing: 0.02em;
+      line-height: 27px;
+      font-size: 1.125rem;
+      margin-left: 20px;
+    }
+    
+	}
+}
+
+.formules__btn {
+  margin-top: 40px;
+  width: 265px;
+  margin-inline: auto;
+  i {
+    margin-left: 5px;
+  }
+}

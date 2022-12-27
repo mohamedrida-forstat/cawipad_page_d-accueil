@@ -1,0 +1,22 @@
+.home {
+	margin-top: 100px;
+	text-align: center;
+	&__title {
+		color: var(--first-color-very-dark);
+		font-size: 2.25rem;
+		font-weight: var(--font-bold);
+		font-family: var(--title-font);
+    margin-bottom: 20px;
+	}
+	&__paragraph {
+		font-size: 1rem;
+		font-family: var(--body-font);
+		line-height: 32px;
+	}
+  &__buttons {
+    column-gap: 25px;
+    margin-top: 20px;
+    margin-inline: auto;
+    width: max-content;
+  }
+}

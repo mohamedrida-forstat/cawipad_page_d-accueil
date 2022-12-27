@@ -1,0 +1,42 @@
+// ========== Variables CSS =========
+:root {
+	--first-color-very-dark: #4d844e;
+	--first-color-dark: #75a575;
+	--first-color-base: #9cc69b;
+	--first-color-light: #c0e7be;
+	--first-color-very-light: #fbfffa;
+	--color-white: #fff;
+
+	// rgb linear gradient
+	--first-color-rgb-very-dark: rgba(77, 132, 78, 0.65);
+	--first-color-rgb-dark: rgba(117, 165, 117, 0.65);
+
+	// footer color
+	--footer-color: #325733;
+
+	//========== Font and typography ==========
+	// .5rem = 8px | 1rem = 16px
+	--title-font: 'Signika', sans-serif;
+	--body-font: 'Open Sans', sans-serif;
+	--paragraph-font: 'Karma', serif;
+
+	//========== Font weight ==========
+	--font-semi-bold: 600;
+	--font-bold: 700;
+
+	//========== Margins ==========
+	// .5rem = 8px | 1rem = 16px
+	--mb-0-5: 0.5rem;
+	--mb-0-75: 0.75rem;
+	--mb-1: 1rem;
+	--mb-1-5: 1.5rem;
+	--mb-2: 2rem;
+	--mb-2-5: 2.5rem;
+	--mb-3: 3rem;
+
+	//========== z index ==========
+	--z-fixed: 100;
+
+	//======== Button Shadow =========
+	--btn-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+}
