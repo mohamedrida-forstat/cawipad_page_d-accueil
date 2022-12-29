@@ -1,17 +1,27 @@
 .home {
 	margin-top: 100px;
 	text-align: center;
+	@include mediaSM {
+		margin-top: 120px;
+	}
 	&__title {
 		color: var(--first-color-very-dark);
 		font-size: 2.25rem;
 		font-weight: var(--font-bold);
 		font-family: var(--title-font);
 		margin-bottom: 20px;
+		@include mediaSM {
+			font-size: 3.625rem;
+		}
 	}
 	&__paragraph {
 		font-size: 1rem;
 		font-family: var(--body-font);
 		line-height: 32px;
+		@include mediaSM {
+			font-size: 25px;
+			line-height: 52px;
+		}
 	}
 	&__buttons {
 		column-gap: 25px;
@@ -21,6 +31,9 @@
 		@include mediaXXS {
 			flex-direction: column;
 			row-gap: 20px;
+		}
+		@include mediaSM {
+			margin-top: 35px;
 		}
 	}
 }

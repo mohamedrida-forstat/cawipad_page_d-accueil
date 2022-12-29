@@ -12,10 +12,6 @@ a {
 	color: inherit;
 }
 /*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-	// max-width: 1024px;
-	margin-inline: auto;
-}
 
 .flex {
 	display: flex;
@@ -27,6 +23,11 @@ a {
 	position: relative;
 	@include mediaXXS {
 		padding-top: 10px !important;
+	}
+	@include mediaSM {
+		height: initial;
+		padding-bottom: 10rem !important;
+		padding-top: 20px !important;
 	}
 	&::after {
 		content: '';
@@ -41,6 +42,9 @@ a {
 }
 .section {
 	padding-block: 2rem;
+	@include mediaSM {
+		padding-block: 8rem;
+	}
 	&__title {
 		text-align: center;
 		text-transform: uppercase;
@@ -48,9 +52,18 @@ a {
 		font-weight: var(--font-bold);
 		font-size: 1.625rem;
 		font-family: var(--title-font);
+		letter-spacing: 0.05em;
 		position: relative;
 		width: max-content;
 		margin-inline: auto;
+		@include mediaXXS {
+			font-size: 1.7rem;
+			line-height: 32px;
+			letter-spacing: 0;
+		}
+		@include mediaSM {
+			font-size: 38px;
+		}
 		&::before {
 			position: absolute;
 			width: 60%;
@@ -79,5 +92,9 @@ a {
 		letter-spacing: 0.02em;
 		line-height: 28px;
 		font-family: var(--paragraph-font);
+		@include mediaSM {
+			font-size: 20px;
+			line-height: 32px;
+		}
 	}
 }

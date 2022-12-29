@@ -2,6 +2,9 @@ header {
 	display: flex;
 	height: 70px;
 	align-items: center;
+	@include mediaSM {
+		height: initial;
+	}
 	.nav {
 		justify-content: space-between;
 		align-items: center;
@@ -9,10 +12,17 @@ header {
 		&__logo {
 			width: 97px;
 			height: 43px;
+			@include mediaSM {
+				width: 140px;
+				height: 55px;
+			}
 		}
 		&__toggle {
 			font-size: 2rem;
-			color: gray;
+			color: hsla(0, 0%, 0%, 0.9);
+			@include mediaSM {
+				font-size: 2.25rem ;
+			}
 		}
 	}
 }

@@ -3,6 +3,10 @@
 	@include mediaXXS {
 		padding-inline: 10px;
 	}
+	@include mediaSM {
+		width: 730px;
+		margin-inline: auto;
+	}
 }
 
 

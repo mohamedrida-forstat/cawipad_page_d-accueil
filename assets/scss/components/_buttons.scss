@@ -12,6 +12,11 @@
 	font-weight: var(--font-semi-bold);
 	color: var(--color-white);
 	font-family: var(--body-font);
+	@include mediaSM {
+		width: 260px;
+		height: 57px;
+		font-size: 20px;
+	}
 }
 .alt {
 	background-color: transparent;
@@ -19,5 +24,8 @@
 	i {
 		font-size: 1.75rem;
 		margin-right: 8px;
+		@include mediaSM {
+			font-size: 2rem;
+		}
 	}
 }

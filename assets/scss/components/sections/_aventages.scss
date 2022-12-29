@@ -5,10 +5,19 @@
 		display: flex;
 		flex-direction: column;
 		row-gap: 20px;
+		@include mediaSM {
+			margin-top: 70px;
+		}
 		.aventage {
 			position: relative;
 			object-fit: cover;
 			height: 267px;
+			@include mediaXS {
+				height: 375px;
+			}
+			@include mediaSM {
+				height: 495px;
+			}
 			.aventage__overlay {
 				position: absolute;
 				width: 100%;
@@ -21,6 +30,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				padding-inline: 10px;
 				.aventage__paragraph {
 					width: 340px;
 					font-size: 22px;
@@ -31,6 +41,14 @@
 					letter-spacing: 0.03em;
 					line-height: 32px;
 					color: white;
+					@include mediaXXS {
+						font-size: 19px;
+					}
+					@include mediaSM {
+						font-size: 32px;
+						line-height: 38px;
+						width: 610px;
+					}
 				}
 			}
 			.aventage__img {

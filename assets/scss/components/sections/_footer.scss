@@ -13,6 +13,13 @@
 		left: 0;
 		-webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
 		clip-path: polygon(0 0, 0% 100%, 100% 100%);
+		@include mediaXXS {
+			top: -49px;
+		}
+		@include mediaSM {
+			height: 80px;
+			top: -79px;
+		}
 	}
 	.footer__logo {
 		width: 120px;
@@ -20,6 +27,11 @@
 		margin-left: 75px;
 		@include mediaXXS {
 			margin-left: 20px;
+			width: 100px;
+			height: 45px;
+		}
+		@include mediaSM {
+			margin-left: 0;
 		}
 	}
 	.flex__footer {
@@ -29,6 +41,12 @@
 		display: flex;
 		flex-direction: column;
 		row-gap: 60px;
+		@include mediaSM {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 40px 60px;
+			width: initial;
+		}
 		.footer_title {
 			font-family: var(--body-font);
 			font-weight: var(--font-bold);
@@ -41,6 +59,9 @@
 			align-items: center;
 			column-gap: 20px;
 			margin-bottom: 25px;
+			@include mediaXXS {
+				margin-bottom: 15px;
+			}
 			i {
 				font-size: 22px;
 				&.fa-chevron-right {
@@ -53,6 +74,9 @@
 				font-size: 22px;
 				line-height: 32px;
 				letter-spacing: 0.03em;
+				@include mediaXXS {
+					font-size: 18px;
+				}
 			}
 		}
 	}
@@ -61,8 +85,14 @@
 		margin-top: 50px;
 		column-gap: 25px;
 		justify-content: center;
+		@include mediaSM {
+			margin-top: 125px;
+		}
 		i {
 			font-size: 40px;
+			@include mediaXXS {
+				font-size: 35px;
+			}
 		}
 	}
 	.footer__copyright {
@@ -73,5 +103,12 @@
 		color: rgba(white, 0.95);
 		margin-top: 20px;
 		margin-bottom: 30px;
+		@include mediaXXS {
+			font-size: 13px;
+		}
+		@include mediaSM {
+			font-size: 18px;
+			margin-top: 25px;
+		}
 	}
 }

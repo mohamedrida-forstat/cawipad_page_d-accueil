@@ -7,10 +7,28 @@
 		flex-direction: column;
 		align-items: center;
 		row-gap: 25px;
+		@include mediaSM {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: start;
+			gap: 45px;
+		}
 		.service {
 			width: 348px;
 			text-align: center;
 			padding-block: 20px;
+			@include mediaXXS {
+				width: 100%;
+			}
+			@include mediaSM {
+				flex: 1;
+			}
+			&:last-of-type {
+				@include mediaSM {
+					flex: initial;
+				}
+			}
 			.image__container {
 				border-radius: 50%;
 				height: 270px;
@@ -21,6 +39,20 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				@include mediaXXS {
+					width: 220px;
+					height: 220px;
+					& img {
+						max-width: 100%;
+					}
+				}
+				@include mediaSM {
+					width: 240px;
+					height: 240px;
+					& img {
+						max-width: 100%;
+					}
+				}
 			}
 			&__title {
 				font-size: 1.75rem;
@@ -29,12 +61,21 @@
 				color: var(--first-color-base);
 				margin-top: 25px;
 				margin-bottom: 20px;
+				@include mediaXXS {
+					font-size: 1.5rem;
+				}
 			}
 			&__paragraph {
 				font-size: 19px;
 				line-height: 26px;
 				letter-spacing: 0.02em;
 				font-family: var(--paragraph-font);
+				@include mediaXXS {
+					font-size: 18px;
+				}
+				@include mediaSM {
+					font-size: 18px;
+				}
 			}
 		}
 	}

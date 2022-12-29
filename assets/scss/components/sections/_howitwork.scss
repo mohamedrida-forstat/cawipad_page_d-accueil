@@ -24,12 +24,46 @@
 		display: grid;
 		row-gap: 25px;
 		margin-top: 60px;
+		@include mediaSM {
+			row-gap: 50px;
+			justify-content: center;
+			margin-top: 100px;
+		}
 		.work {
 			background-color: white;
 			padding: 25px;
 			box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.15);
 			@include mediaXXS {
 				padding-inline: 10px;
+			}
+			@include mediaSM {
+				border-radius: 50px;
+				width: 615px;
+				position: relative;
+				&:first-of-type .work__title {
+					margin-top: 10px;
+				}
+				&:nth-of-type(3) .work__title {
+					width: 400px !important;
+				}
+			}
+			.work__number {
+				background: url(../svg/works/circle.svg) no-repeat;
+				width: 65px;
+				height: 65px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: var(--title-font);
+				font-size: 23px;
+				font-weight: var(--font-semi-bold);
+				position: absolute;
+				left: 20px;
+				top: 20px;
+				display: none;
+				@include mediaSM {
+					display: flex;
+				}
 			}
 			.work__title {
 				font-family: var(--title-font);
@@ -46,6 +80,12 @@
 					letter-spacing: 0;
 					margin-bottom: 15px;
 				}
+				@include mediaSM {
+					font-size: 26px;
+					margin-bottom: 30px;
+					width: 505px;
+					margin-inline: auto;
+				}
 			}
 			.work__image {
 				margin-inline: auto;
@@ -56,16 +96,28 @@
 					height: 180px;
 					margin-bottom: 15px;
 				}
+				@include mediaSM {
+					width: 359px;
+					height: 262px;
+					margin-bottom: 30px;
+				}
 			}
 			.work__paragraph {
 				text-align: center;
 				font-family: var(--paragraph-font);
 				line-height: 32px;
 				letter-spacing: 0.02em;
+				@include mediaSM {
+					font-size: 20px;
+				}
 			}
 			&:last-of-type .work__paragraph {
 				font-size: 15px;
 				letter-spacing: 0;
+				@include mediaSM {
+					font-size: 20px;
+					letter-spacing: 0.02em;
+				}
 			}
 		}
 	}
