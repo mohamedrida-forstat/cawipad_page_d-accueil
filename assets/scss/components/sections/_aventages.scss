@@ -8,6 +8,11 @@
 		@include mediaSM {
 			margin-top: 70px;
 		}
+		@include mediaMD {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 25px 20px;
+		}
 		.aventage {
 			position: relative;
 			object-fit: cover;
@@ -17,6 +22,9 @@
 			}
 			@include mediaSM {
 				height: 495px;
+			}
+			@include mediaMD {
+				height: 300px;
 			}
 			.aventage__overlay {
 				position: absolute;
@@ -48,6 +56,9 @@
 						font-size: 32px;
 						line-height: 38px;
 						width: 610px;
+					}
+					@include mediaMD {
+						font-size: 25px;
 					}
 				}
 			}

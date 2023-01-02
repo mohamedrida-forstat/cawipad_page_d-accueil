@@ -33,6 +33,10 @@
 		@include mediaSM {
 			margin-left: 0;
 		}
+		@include mediaMD {
+			height: 50px;
+			width: initial;
+		}
 	}
 	.flex__footer {
 		margin-top: 60px;
@@ -47,12 +51,20 @@
 			gap: 40px 60px;
 			width: initial;
 		}
+		@include mediaMD {
+			flex-wrap: nowrap;
+			column-gap: 20px;
+			justify-content: space-between;
+		}
 		.footer_title {
 			font-family: var(--body-font);
 			font-weight: var(--font-bold);
 			font-size: 1.625rem;
 			letter-spacing: 0.03em;
 			margin-bottom: 25px;
+			@include mediaMD {
+				font-size: 22px;
+			}
 		}
 		.flex__info {
 			display: flex;
@@ -77,6 +89,10 @@
 				@include mediaXXS {
 					font-size: 18px;
 				}
+				@include mediaMD {
+					font-size: 18px;
+					line-height: 28px;
+				}
 			}
 		}
 	}
@@ -87,6 +103,9 @@
 		justify-content: center;
 		@include mediaSM {
 			margin-top: 125px;
+		}
+		@include mediaMD {
+			margin-top: 80px;
 		}
 		i {
 			font-size: 40px;
@@ -109,6 +128,9 @@
 		@include mediaSM {
 			font-size: 18px;
 			margin-top: 25px;
+		}
+		@include mediaMD {
+			font-size: 16px;
 		}
 	}
 }

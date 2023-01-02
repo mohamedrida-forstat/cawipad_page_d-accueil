@@ -45,6 +45,9 @@ a {
 	@include mediaSM {
 		padding-block: 8rem;
 	}
+	@include mediaMD {
+		padding-block: 6rem;
+	}
 	&__title {
 		text-align: center;
 		text-transform: uppercase;
@@ -63,6 +66,9 @@ a {
 		}
 		@include mediaSM {
 			font-size: 38px;
+		}
+		@include mediaMD {
+			font-size: 32px;
 		}
 		&::before {
 			position: absolute;
@@ -95,6 +101,9 @@ a {
 		@include mediaSM {
 			font-size: 20px;
 			line-height: 32px;
+		}
+		@include mediaMD {
+			font-size: 18px;
 		}
 	}
 }

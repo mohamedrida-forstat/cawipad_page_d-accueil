@@ -17,10 +17,18 @@
 		height: 57px;
 		font-size: 20px;
 	}
+	@include mediaMD {
+		width: 180px;
+		height: 50px;
+		font-size: 16px;
+	}
 }
 .alt {
 	background-color: transparent;
 	color: var(--first-color-dark);
+	@include mediaMD {
+		width: 200px;
+	}
 	i {
 		font-size: 1.75rem;
 		margin-right: 8px;

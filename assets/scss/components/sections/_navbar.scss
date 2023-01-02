@@ -1,7 +1,5 @@
 header {
-	display: flex;
 	height: 70px;
-	align-items: center;
 	@include mediaSM {
 		height: initial;
 	}
@@ -9,19 +7,65 @@ header {
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		&__logo {
+		&__logo img {
 			width: 97px;
 			height: 43px;
 			@include mediaSM {
 				width: 140px;
 				height: 55px;
 			}
+			@include mediaMD {
+				width: 120px;
+				height: 50px;
+			}
+		}
+		&__links {
+			display: none;
+			@include mediaMD {
+				display: flex;
+				list-style: none;
+				gap: 30px;
+				li a {
+					font-size: 18px;
+					font-family: var(--body-font);
+					font-weight: var(--font-semi-bold);
+					position: relative;
+					&::after {
+						content: '';
+						position: absolute;
+						left: 0;
+						bottom: -10px;
+						width: 0;
+						height: 5px;
+						background-color: var(--first-color-dark);
+						transition: 0.2s linear;
+					}
+					&:hover::after,
+					&.active::after {
+						width: 100%;
+					}
+				}
+			}
 		}
 		&__toggle {
 			font-size: 2rem;
 			color: hsla(0, 0%, 0%, 0.9);
 			@include mediaSM {
-				font-size: 2.25rem ;
+				font-size: 2.25rem;
+			}
+			@include mediaMD {
+				display: none;
+			}
+		}
+		&__connexion {
+			display: none;
+			@include mediaMD {
+				display: flex;
+				border-radius: 5px;
+				font-size: 16px;
+				i {
+					margin-left: 10px;
+				}
 			}
 		}
 	}

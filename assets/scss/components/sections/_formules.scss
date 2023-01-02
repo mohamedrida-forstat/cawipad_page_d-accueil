@@ -31,6 +31,10 @@
 			flex-wrap: wrap;
 			margin-top: 75px;
 		}
+		@include mediaMD {
+			gap: 40px;
+			margin-top: 95px;
+		}
 		.formule {
 			width: 303px;
 			height: 300px;
@@ -41,6 +45,9 @@
 			padding: 30px 15px;
 			&:nth-of-type(2) .formule__icon {
 				margin-left: 10px;
+			}
+			@include mediaMD {
+				flex: 1;
 			}
 			.formule__title {
 				margin-block: 20px;

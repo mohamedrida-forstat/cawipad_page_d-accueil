@@ -47,7 +47,7 @@
 					width: 400px !important;
 				}
 			}
-			.work__number {
+			&__number {
 				background: url(../svg/works/circle.svg) no-repeat;
 				width: 65px;
 				height: 65px;
@@ -65,7 +65,7 @@
 					display: flex;
 				}
 			}
-			.work__title {
+			&__title {
 				font-family: var(--title-font);
 				font-weight: var(--font-bold);
 				font-size: 22px;
@@ -87,7 +87,7 @@
 					margin-inline: auto;
 				}
 			}
-			.work__image {
+			&__image {
 				margin-inline: auto;
 				display: block;
 				margin-bottom: 25px;
@@ -102,7 +102,7 @@
 					margin-bottom: 30px;
 				}
 			}
-			.work__paragraph {
+			&__paragraph {
 				text-align: center;
 				font-family: var(--paragraph-font);
 				line-height: 32px;
@@ -111,7 +111,7 @@
 					font-size: 20px;
 				}
 			}
-			&:last-of-type .work__paragraph {
+			&:last-of-type &__paragraph {
 				font-size: 15px;
 				letter-spacing: 0;
 				@include mediaSM {
