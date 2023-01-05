@@ -22,12 +22,20 @@
 		height: 50px;
 		font-size: 16px;
 	}
+	@include mediaLG {
+		width: 215px;
+		height: 55px;
+		font-size: 18px;
+	}
 }
 .alt {
 	background-color: transparent;
 	color: var(--first-color-dark);
 	@include mediaMD {
 		width: 200px;
+	}
+	@include mediaLG {
+		width: 220px;
 	}
 	i {
 		font-size: 1.75rem;

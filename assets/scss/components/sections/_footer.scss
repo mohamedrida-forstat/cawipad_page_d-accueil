@@ -9,7 +9,7 @@
 		width: 100%;
 		height: 50px;
 		background-color: var(--footer-color);
-		top: -50px;
+		top: -49px;
 		left: 0;
 		-webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
 		clip-path: polygon(0 0, 0% 100%, 100% 100%);
@@ -39,12 +39,12 @@
 		}
 	}
 	.flex__footer {
-		margin-top: 60px;
+		margin-top: 80px;
 		width: 295px;
 		margin-inline: auto;
 		display: flex;
 		flex-direction: column;
-		row-gap: 60px;
+		row-gap: 50px;
 		@include mediaSM {
 			flex-direction: row;
 			flex-wrap: wrap;
@@ -59,7 +59,7 @@
 		.footer_title {
 			font-family: var(--body-font);
 			font-weight: var(--font-bold);
-			font-size: 1.625rem;
+			font-size: 24px;
 			letter-spacing: 0.03em;
 			margin-bottom: 25px;
 			@include mediaMD {
@@ -83,7 +83,7 @@
 			p,
 			a {
 				font-family: var(--paragraph-font);
-				font-size: 22px;
+				font-size: 20px;
 				line-height: 32px;
 				letter-spacing: 0.03em;
 				@include mediaXXS {

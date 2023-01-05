@@ -10,6 +10,9 @@
 	@include mediaMD {
 		width: 960px;
 	}
+	@include mediaLG {
+		width: 1140px;
+	}
 }
 
 

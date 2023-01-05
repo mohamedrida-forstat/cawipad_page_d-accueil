@@ -29,6 +29,10 @@
 			justify-content: center;
 			margin-top: 100px;
 		}
+		@include mediaLG {
+			grid-template-columns: repeat(2, 550px);
+			column-gap: 40px;
+		}
 		.work {
 			background-color: white;
 			padding: 25px;
@@ -42,10 +46,37 @@
 				position: relative;
 				&:first-of-type .work__title {
 					margin-top: 10px;
+					@include mediaLG {
+						width: 550px;
+					}
+				}
+				&:first-of-type .work__image {
+					@include mediaLG {
+						height: initial;
+						width: 390px;
+					}
 				}
 				&:nth-of-type(3) .work__title {
-					width: 400px !important;
+					@include mediaSM {
+						width: 400px !important;
+					}
+					@include mediaLG {
+						text-indent: 40px;
+						width: 420px !important;
+					}
 				}
+				&:nth-of-type(3) .work__image {
+					width: 315px;
+					height: initial;
+				}
+				&:last-of-type .work__title {
+					@include mediaLG {
+						margin-left: 20px;
+					}
+				}
+			}
+			@include mediaLG {
+				width: initial;
 			}
 			&__number {
 				background: url(../svg/works/circle.svg) no-repeat;
@@ -86,6 +117,9 @@
 					width: 505px;
 					margin-inline: auto;
 				}
+				@include mediaLG {
+					font-size: 24px;
+				}
 			}
 			&__image {
 				margin-inline: auto;
@@ -109,6 +143,9 @@
 				letter-spacing: 0.02em;
 				@include mediaSM {
 					font-size: 20px;
+				}
+				@include mediaLG {
+					font-size: 18px;
 				}
 			}
 			&:last-of-type &__paragraph {

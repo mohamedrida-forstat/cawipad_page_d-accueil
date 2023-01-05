@@ -8,10 +8,18 @@
 		text-align: initial;
 		margin-top: 80px;
 	}
+	@include mediaLG {
+		margin-top: 80px;
+	}
 	.flex__home {
 		display: flex;
 		align-items: center;
 		column-gap: 35px;
+	}
+	&__content {
+		@include mediaLG {
+			flex: 1 0 500px;
+		}
 	}
 	&__title {
 		color: var(--first-color-very-dark);
@@ -25,6 +33,11 @@
 		@include mediaMD {
 			font-size: 42px;
 		}
+		@include mediaLG {
+			font-size: 52px;
+			line-height: 65px;
+			margin-top: 0;
+		}
 	}
 	&__paragraph {
 		font-size: 1rem;
@@ -37,6 +50,10 @@
 		@include mediaMD {
 			font-size: 18px;
 			line-height: 38px;
+		}
+		@include mediaLG {
+			font-size: 20px;
+			line-height: 40px;
 		}
 	}
 	&__buttons {
@@ -61,6 +78,10 @@
 		display: none;
 		@include mediaMD {
 			display: block;
+		}
+		@include mediaLG {
+			height: initial;
+			width: 595px;
 		}
 	}
 }

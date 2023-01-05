@@ -1,5 +1,11 @@
 .aventages {
 	margin-top: 60px;
+	.container {
+		@include mediaLG {
+			width: initial;
+			padding-inline: 25px;
+		}
+	}
 	.flex__aventages {
 		margin-top: 40px;
 		display: flex;
@@ -12,6 +18,9 @@
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 25px 20px;
+		}
+		@include mediaLG {
+			gap: 45px 30px;
 		}
 		.aventage {
 			position: relative;
@@ -26,6 +35,9 @@
 			@include mediaMD {
 				height: 300px;
 			}
+			@include mediaLG {
+				height: 400px;
+			}
 			.aventage__overlay {
 				position: absolute;
 				width: 100%;
@@ -39,6 +51,9 @@
 				align-items: center;
 				justify-content: center;
 				padding-inline: 10px;
+				@include mediaLG {
+					padding-inline: 25px;
+				}
 				.aventage__paragraph {
 					width: 340px;
 					font-size: 22px;
@@ -59,6 +74,10 @@
 					}
 					@include mediaMD {
 						font-size: 25px;
+					}
+					@include mediaLG {
+						font-size: 32px;
+						line-height: 42px;
 					}
 				}
 			}
