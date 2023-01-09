@@ -12,6 +12,11 @@
 	font-weight: var(--font-semi-bold);
 	color: var(--color-white);
 	font-family: var(--body-font);
+	transition: 300ms ease-in;
+	&:hover {
+		background-color: var(--first-color-base);
+		border: 2px solid var(--first-color-base);
+	}
 	@include mediaSM {
 		width: 260px;
 		height: 57px;
@@ -31,6 +36,10 @@
 .alt {
 	background-color: transparent;
 	color: var(--first-color-dark);
+	&:hover,
+	&:hover i {
+		color: white;
+	}
 	@include mediaMD {
 		width: 200px;
 	}
@@ -40,6 +49,7 @@
 	i {
 		font-size: 1.75rem;
 		margin-right: 8px;
+		transition: 180ms ease-in;
 		@include mediaSM {
 			font-size: 2rem;
 		}

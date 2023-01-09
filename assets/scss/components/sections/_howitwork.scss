@@ -37,6 +37,11 @@
 			background-color: white;
 			padding: 25px;
 			box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.15);
+			transition: 300ms ease-in;
+			&:hover {
+				background-color: var(--first-color-base);
+				box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.5);
+			}
 			@include mediaXXS {
 				padding-inline: 10px;
 			}
@@ -106,6 +111,7 @@
 				letter-spacing: 0.03em;
 				margin-bottom: 25px;
 				line-height: 32px;
+				transition: 300ms ease-in;
 				@include mediaXXS {
 					font-size: 20px;
 					letter-spacing: 0;
@@ -120,6 +126,9 @@
 				@include mediaLG {
 					font-size: 24px;
 				}
+			}
+			&:hover .work__title {
+				color: black;
 			}
 			&__image {
 				margin-inline: auto;

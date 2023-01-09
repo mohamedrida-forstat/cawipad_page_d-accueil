@@ -8,7 +8,9 @@
   --color-white: #fff;
   --first-color-rgb-very-dark: rgba(77, 132, 78, 0.65);
   --first-color-rgb-dark: rgba(117, 165, 117, 0.65);
+  --secondary-color-light: #ffb3ff;
   --footer-color: #325733;
+  --grey-color: #f2f2f2;
   --title-font: "Signika", sans-serif;
   --body-font: "Open Sans", sans-serif;
   --paragraph-font: "Karma", serif;
@@ -211,6 +213,12 @@ a {
   font-weight: var(--font-semi-bold);
   color: var(--color-white);
   font-family: var(--body-font);
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+}
+.button:hover {
+  background-color: var(--first-color-base);
+  border: 2px solid var(--first-color-base);
 }
 @media (min-width: 769px) {
   .button {
@@ -238,6 +246,9 @@ a {
   background-color: transparent;
   color: var(--first-color-dark);
 }
+.alt:hover, .alt:hover i {
+  color: white;
+}
 @media (min-width: 992px) {
   .alt {
     width: 200px;
@@ -251,6 +262,8 @@ a {
 .alt i {
   font-size: 1.75rem;
   margin-right: 8px;
+  -webkit-transition: 180ms ease-in;
+  transition: 180ms ease-in;
 }
 @media (min-width: 769px) {
   .alt i {
@@ -380,9 +393,16 @@ header .nav__connexion {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 35px;
-     -moz-column-gap: 35px;
-          column-gap: 35px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+@media (min-width: 1200px) {
+  .home .flex__home {
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+  }
 }
 @media (min-width: 1200px) {
   .home__content {
@@ -641,6 +661,15 @@ header .nav__connexion {
   }
 }
 
+#item_1,
+#item_2,
+#item_3,
+#item_4,
+#item_5 {
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
 .works {
   background-color: var(--first-color-very-light);
   position: relative;
@@ -690,6 +719,13 @@ header .nav__connexion {
   padding: 25px;
   -webkit-box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.15);
           box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.15);
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+}
+.works .works__content .work:hover {
+  background-color: var(--first-color-base);
+  -webkit-box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.5);
+          box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.5);
 }
 @media (max-width: 430px) {
   .works .works__content .work {
@@ -782,6 +818,8 @@ header .nav__connexion {
   letter-spacing: 0.03em;
   margin-bottom: 25px;
   line-height: 32px;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
 }
 @media (max-width: 430px) {
   .works .works__content .work__title {
@@ -802,6 +840,9 @@ header .nav__connexion {
   .works .works__content .work__title {
     font-size: 24px;
   }
+}
+.works .works__content .work:hover .work__title {
+  color: black;
 }
 .works .works__content .work__image {
   margin-inline: auto;
@@ -1092,6 +1133,8 @@ header .nav__connexion {
           box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   background-color: white;
   padding: 30px 15px;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
 }
 .formules .flex__formules .formule:nth-of-type(2) .formule__icon {
   margin-left: 10px;
@@ -1108,7 +1151,17 @@ header .nav__connexion {
     padding-inline: 20px;
   }
 }
-.formules .flex__formules .formule .formule__title {
+.formules .flex__formules .formule:hover {
+  background-color: var(--first-color-dark);
+}
+.formules .flex__formules .formule__icon path {
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+}
+.formules .flex__formules .formule:hover .formule__icon path {
+  stroke: white;
+}
+.formules .flex__formules .formule__title {
   margin-block: 20px;
   font-size: 24px;
   font-family: var(--body-font);
@@ -1117,13 +1170,20 @@ header .nav__connexion {
   letter-spacing: 0.05em;
   margin-left: 20px;
   text-transform: capitalize;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
 }
-.formules .flex__formules .formule .formule__paragraph {
+.formules .flex__formules .formule:hover .formule__title, .formules .flex__formules .formule:hover .formule__paragraph {
+  color: white;
+}
+.formules .flex__formules .formule__paragraph {
   font-family: var(--paragraph-font);
   letter-spacing: 0.02em;
   line-height: 27px;
   font-size: 1.125rem;
   margin-left: 20px;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
 }
 
 .formules__btn {
@@ -1369,6 +1429,18 @@ header .nav__connexion {
   .footer .flex__footer .footer_title {
     font-size: 22px;
   }
+}
+@media (min-width: 1200px) {
+  .footer .flex__footer .footer_links {
+    width: 215px;
+  }
+}
+.footer .flex__footer .footer_links .flex__info p {
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+}
+.footer .flex__footer .footer_links .flex__info:hover p {
+  padding-left: 10px;
 }
 .footer .flex__footer .flex__info {
   display: -webkit-box;

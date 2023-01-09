@@ -66,6 +66,17 @@
 				font-size: 22px;
 			}
 		}
+		.footer_links {
+			@include mediaLG {
+				width: 215px;
+			}
+		}
+		.footer_links .flex__info p {
+			transition: 300ms ease-in;
+		}
+		.footer_links .flex__info:hover p {
+			padding-left: 10px;
+		}
 		.flex__info {
 			display: flex;
 			align-items: center;

@@ -14,7 +14,10 @@
 	.flex__home {
 		display: flex;
 		align-items: center;
-		column-gap: 35px;
+		column-gap: 30px;
+		@include mediaLG {
+			column-gap: 40px;
+		}
 	}
 	&__content {
 		@include mediaLG {
