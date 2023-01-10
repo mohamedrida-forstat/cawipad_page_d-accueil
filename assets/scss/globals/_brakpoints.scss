@@ -1,5 +1,6 @@
 .container {
 	padding-inline: 20px;
+	width: 100%;
 	@include mediaXXS {
 		padding-inline: 10px;
 	}
@@ -14,5 +15,3 @@
 		width: 1140px;
 	}
 }
-
-

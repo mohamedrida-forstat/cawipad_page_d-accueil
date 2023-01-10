@@ -40,7 +40,7 @@
 			transition: 300ms ease-in;
 			&:hover {
 				background-color: var(--first-color-base);
-				box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.5);
+				box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.3);
 			}
 			@include mediaXXS {
 				padding-inline: 10px;

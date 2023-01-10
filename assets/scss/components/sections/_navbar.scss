@@ -1,8 +1,21 @@
+// For Javascript scrolling
+.scroll-header {
+	position: fixed;
+	width: 100%;
+	box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+	top: 0;
+	margin: auto;
+	background-color: white;
+	padding-block: 20px;
+	z-index: var(--z-fixed);
+	transition: 300ms ease-out;
+	padding-block: 40px;
+}
 header {
 	height: 70px;
-	@include mediaSM {
-		height: initial;
-	}
+	align-items: center;
+	display: flex;
+	transition: 300ms ease-out;
 	.nav {
 		justify-content: space-between;
 		align-items: center;
@@ -19,37 +32,90 @@ header {
 				height: 50px;
 			}
 		}
+		// SHOW MENU
+		.show-menu {
+			top: 13%;
+		}
 		&__links {
-			display: none;
+			position: fixed;
+			background-color: white;
+			box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+			padding: 40px 0;
+			width: 80%;
+			top: -100%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			transition: 300ms ease-out;
+			border-radius: 32px;
+			z-index: var(--z-fixed);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			row-gap: 24px;
+			list-style: none;
+			color: black;
+			@include mediaXS {
+				width: 60%;
+			}
+			@include mediaSM {
+				width: 60%;
+			}
 			@include mediaMD {
 				display: flex;
-				list-style: none;
+				flex-direction: row;
+				position: initial;
+				width: initial;
+				padding: initial;
+				box-shadow: initial;
+				background-color: initial;
+				border-radius: initial;
+				color: black;
 				gap: 30px;
-				li a {
+				.nav__close {
+					display: none;
+				}
+			}
+			.nav__close {
+				position: absolute;
+				top: 20px;
+				right: 20px;
+				cursor: pointer;
+				i {
+					font-size: 22px;
+				}
+			}
+			li a {
+				font-size: 16px;
+				font-family: var(--body-font);
+				font-weight: var(--font-semi-bold);
+				position: relative;
+				@include mediaSM {
 					font-size: 18px;
-					font-family: var(--body-font);
-					font-weight: var(--font-semi-bold);
-					position: relative;
-					&::after {
-						content: '';
-						position: absolute;
-						left: 0;
-						bottom: -10px;
-						width: 0;
-						height: 5px;
-						background-color: var(--first-color-dark);
-						transition: 0.2s linear;
-					}
-					&:hover::after,
-					&.active::after {
-						width: 100%;
-					}
+				}
+				@include mediaMD {
+					font-size: 18px;
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: -10px;
+					width: 0;
+					height: 5px;
+					background-color: var(--first-color-dark);
+					transition: 0.2s linear;
+				}
+				&:hover::after,
+				&.active::after {
+					width: 100%;
 				}
 			}
 		}
 		&__toggle {
 			font-size: 2rem;
-			color: hsla(0, 0%, 0%, 0.9);
+			color: black;
+			cursor: pointer;
 			@include mediaSM {
 				font-size: 2.25rem;
 			}
