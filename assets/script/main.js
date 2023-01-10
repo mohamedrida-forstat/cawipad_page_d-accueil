@@ -45,18 +45,22 @@ animateColor(); // to start the animation immediately after the page loaded
 setInterval(animateColor, 6000); // then do the animation every 7s
 
 // ======== SHOW / HIDE MOBILE MENU ============
-const showMenu = (toggleId, navId) => {
+const showMenu = (toggleId, closeId, navId) => {
 	const toggle = document.getElementById(toggleId),
+		close = document.getElementById(closeId),
 		nav = document.getElementById(navId);
 
 	// Validate that variables exist
-	if (toggle && nav) {
+	if (toggle && nav && close) {
 		toggle.addEventListener('click', () => {
-			nav.classList.toggle('show-menu');
+			nav.classList.add('show-menu');
+		});
+		close.addEventListener('click', () => {
+			nav.classList.remove('show-menu');
 		});
 	}
 };
-showMenu('nav-toggle', 'nav-menu');
+showMenu('nav-toggle', 'nav-close', 'nav-menu');
 
 const navLinks = document.querySelectorAll('.nav__link');
 
@@ -76,6 +80,6 @@ function scrollHeader() {
 		this.scrollY > 80
 			? nav.classList.add('scroll-header')
 			: nav.classList.remove('scroll-header');
-	})
+	});
 }
 window.addEventListener('scroll', scrollHeader);

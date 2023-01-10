@@ -34,32 +34,99 @@ header {
 		}
 		// SHOW MENU
 		.show-menu {
-			top: 13%;
+			right: 0;
 		}
 		&__links {
 			position: fixed;
 			background-color: white;
-			box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+			box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
 			padding: 40px 0;
-			width: 80%;
-			top: -100%;
-			left: 0;
-			right: 0;
-			margin: 0 auto;
+			width: 85%;
+			height: 100vh;
+			top: 0;
+			right: -100%;
 			transition: 300ms ease-out;
-			border-radius: 32px;
 			z-index: var(--z-fixed);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			row-gap: 24px;
+			justify-content: center;
+			row-gap: 30px;
 			list-style: none;
 			color: black;
-			@include mediaXS {
-				width: 60%;
+			.flex__buttons {
+				display: flex;
+				flex-direction: column;
+				row-gap: 15px;
+				margin-top: 20px;
+				@include mediaSM {
+					flex-direction: row;
+					column-gap: 20px;
+					margin-top: 35px;
+				}
+				.button {
+					width: 180px;
+					font-size: 15px;
+					@include mediaSM {
+						width: 215px;
+						font-size: 18px;
+					}
+					i {
+						margin-left: 10px;
+						font-size: 15px;
+						@include mediaSM {
+							font-size: 18px;
+						}
+					}
+				}
+				.alt {
+					i {
+						font-size: 22px;
+						@include mediaSM {
+							font-size: 25px;
+						}
+					}
+				}
+			}
+			.social__media {
+				display: flex;
+				column-gap: 20px;
+				@include mediaSM {
+					margin-top: 35px;
+					column-gap: 25px;
+				}
+				a {
+					font-size: 32px;
+					@include mediaSM {
+						font-size: 38px;
+					}
+				}
+				.facebook__link {
+					color: #3b5998;
+				}
+				.instagram__link {
+					color: #e5355b;
+				}
+				.linkedin__link {
+					color: #0077b5;
+				}
+			}
+			.nav__copyright {
+				font-size: 14px;
+				font-family: var(--paragraph-font);
+				line-height: 24px;
+				text-align: center;
+				@include mediaSM {
+					font-size: 16px;
+				}
+				br {
+					@include mediaSM {
+						display: none;
+					}
+				}
 			}
 			@include mediaSM {
-				width: 60%;
+				width: 70%;
 			}
 			@include mediaMD {
 				display: flex;
@@ -71,8 +138,15 @@ header {
 				background-color: initial;
 				border-radius: initial;
 				color: black;
+				height: initial;
 				gap: 30px;
 				.nav__close {
+					display: none;
+				}
+				.nav__link.mobile,
+				.flex__buttons,
+				.social__media,
+				.nav__copyright {
 					display: none;
 				}
 			}
@@ -80,6 +154,7 @@ header {
 				position: absolute;
 				top: 20px;
 				right: 20px;
+				padding: 8px;
 				cursor: pointer;
 				i {
 					font-size: 22px;
@@ -91,7 +166,7 @@ header {
 				font-weight: var(--font-semi-bold);
 				position: relative;
 				@include mediaSM {
-					font-size: 18px;
+					font-size: 20px;
 				}
 				@include mediaMD {
 					font-size: 18px;
