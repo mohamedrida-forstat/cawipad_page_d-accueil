@@ -1,15 +1,15 @@
 .home {
-	margin-top: 100px;
+	margin-top: 120px;
 	text-align: center;
 	@include mediaSM {
-		margin-top: 120px;
+		margin-top: 0;
 	}
 	@include mediaMD {
 		text-align: initial;
 		margin-top: 60px;
 	}
 	@include mediaLG {
-		margin-top: 50px;
+		margin-top: 30px;
 	}
 	.flex__home {
 		display: flex;

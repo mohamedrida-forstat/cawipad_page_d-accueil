@@ -26,8 +26,6 @@ a {
 	}
 	@include mediaSM {
 		height: initial;
-		padding-bottom: 10rem !important;
-		padding-top: 20px !important;
 	}
 	&::after {
 		content: '';
@@ -43,10 +41,10 @@ a {
 .section {
 	padding-block: 2rem;
 	@include mediaSM {
-		padding-block: 8rem;
+		padding-block: 10rem;
 	}
 	@include mediaMD {
-		padding-block: 6rem;
+		padding-block: 5rem;
 	}
 	&__title {
 		text-align: center;
