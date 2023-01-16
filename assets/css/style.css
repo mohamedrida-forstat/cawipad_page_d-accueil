@@ -1442,7 +1442,7 @@ header .nav__connexion {
      object-fit: cover;
   height: 267px;
 }
-@media (min-width: 620px) and (max-width: 768px) {
+@media (min-width: 620px) {
   .aventages .flex__aventages .aventage {
     height: 375px;
   }
@@ -1747,9 +1747,58 @@ header .nav__connexion {
 
 .contact {
   color: #2f2e41;
+  padding-block: 2rem;
+}
+@media (min-width: 1200px) {
+  .contact {
+    padding-block: 4rem;
+  }
+}
+.contact .section__title {
+  font-size: 32px;
+}
+@media (min-width: 620px) {
+  .contact .section__title {
+    font-size: 42px;
+    margin-top: 0;
+  }
+}
+.contact .section__paragraph {
+  text-transform: uppercase;
+}
+@media (min-width: 769px) {
+  .contact .section__paragraph {
+    font-size: 20px;
+    line-height: 37px;
+  }
+}
+@media (min-width: 992px) {
+  .contact .section__paragraph {
+    font-size: 15.5px;
+  }
 }
 .contact .flex__contact {
   margin-top: 60px;
+}
+@media (min-width: 992px) {
+  .contact .flex__contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .contact .flex__contact {
+    -webkit-column-gap: 50px;
+       -moz-column-gap: 50px;
+            column-gap: 50px;
+  }
 }
 .contact .flex__contact .contact__form {
   display: -webkit-box;
@@ -1761,6 +1810,13 @@ header .nav__connexion {
           flex-direction: column;
   row-gap: 28px;
 }
+@media (min-width: 992px) {
+  .contact .flex__contact .contact__form {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
 .contact .flex__contact .contact__form .flex__input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1771,13 +1827,31 @@ header .nav__connexion {
           flex-direction: column;
   row-gap: 28px;
 }
-.contact .flex__contact .contact__form .flex__input label {
+@media (min-width: 769px) {
+  .contact .flex__contact .contact__form .flex__input {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 25px;
+       -moz-column-gap: 25px;
+            column-gap: 25px;
+  }
+}
+@media (min-width: 769px) {
+  .contact .flex__contact .contact__form .flex__input .input__container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+.contact .flex__contact .contact__form .flex__input .input__container label {
   display: block;
   font-size: 20px;
   font-family: var(--body-font);
   font-weight: var(--font-semi-bold);
 }
-.contact .flex__contact .contact__form .flex__input .contact__input {
+.contact .flex__contact .contact__form .flex__input .input__container .contact__input {
   all: unset;
   display: block;
   width: 97%;
@@ -1808,8 +1882,49 @@ header .nav__connexion {
   -webkit-transition: 150ms linear;
   transition: 150ms linear;
 }
+@media (min-width: 992px) {
+  .contact .flex__contact .contact__form .message__container .contact__message {
+    height: 70px;
+  }
+}
+@media (min-width: 1200px) {
+  .contact .flex__contact .contact__form .message__container .contact__message {
+    height: 150px;
+  }
+}
 .contact .flex__contact .contact__form .contact__button {
   width: 100%;
+}
+.contact .flex__contact .contact__image {
+  display: none;
+}
+@media (min-width: 992px) {
+  .contact .flex__contact .contact__image {
+    display: inline-block;
+    width: 450px;
+  }
+}
+@media (min-width: 1200px) {
+  .contact .flex__contact .contact__image {
+    width: initial;
+  }
+}
+@media (min-width: 1200px) {
+  .contact .flex__info-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: 60px;
+       -moz-column-gap: 60px;
+            column-gap: 60px;
+    margin-top: 60px;
+  }
 }
 .contact .flex__info {
   display: -webkit-box;
@@ -1825,8 +1940,39 @@ header .nav__connexion {
   margin-top: 50px;
   row-gap: 25px;
 }
+@media (min-width: 620px) {
+  .contact .flex__info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 40px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (min-width: 992px) {
+  .contact .flex__info {
+    margin-top: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .contact .flex__info {
+    margin-top: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
 .contact .flex__info .info {
   width: 200px;
+  height: 190px;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
@@ -1858,6 +2004,31 @@ header .nav__connexion {
 .contact .social {
   margin-top: 50px;
 }
+@media (min-width: 769px) {
+  .contact .social {
+    margin-top: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .contact .social {
+    margin-top: 0;
+  }
+}
+@media (min-width: 620px) {
+  .contact .social .section__title {
+    font-size: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  .contact .social .section__title {
+    margin-top: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .contact .social .section__title::after, .contact .social .section__title::before {
+    display: none;
+  }
+}
 .contact .social .flex__social {
   margin-top: 60px;
   display: -webkit-box;
@@ -1871,6 +2042,11 @@ header .nav__connexion {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (min-width: 1200px) {
+  .contact .social .flex__social {
+    margin-top: 20px;
+  }
 }
 .contact .social .flex__social .flex__social-icons {
   display: -webkit-box;

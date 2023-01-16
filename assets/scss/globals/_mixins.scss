@@ -5,7 +5,7 @@
 	}
 }
 @mixin mediaXS {
-	@media (min-width: 620px) and (max-width: 768px) {
+	@media (min-width: 620px) {
 		@content;
 	}
 }

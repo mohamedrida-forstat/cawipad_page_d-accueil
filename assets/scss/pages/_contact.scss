@@ -1,35 +1,76 @@
 ::selection {
-  background-color: var(--first-color-very-dark);
-  color: white;
+	background-color: var(--first-color-very-dark);
+	color: white;
 }
 .contact {
 	color: #2f2e41;
+	padding-block: 2rem;
+	@include mediaLG {
+		padding-block: 4rem;
+	}
+	.section__title {
+		font-size: 32px;
+		@include mediaXS {
+			font-size: 42px;
+			margin-top: 0;
+		}
+	}
+	.section__paragraph {
+		text-transform: uppercase;
+		@include mediaSM {
+			font-size: 20px;
+			line-height: 37px;
+		}
+		@include mediaMD {
+			font-size: 15.5px;
+		}
+	}
 	.flex__contact {
 		margin-top: 60px;
+		@include mediaMD {
+			display: flex;
+			align-items: center;
+			column-gap: 40px;
+		}
+		@include mediaLG {
+			column-gap: 50px;
+		}
 		.contact__form {
 			display: flex;
 			flex-direction: column;
 			row-gap: 28px;
+			@include mediaMD {
+				flex: 1;
+			}
 			.flex__input {
 				display: flex;
 				flex-direction: column;
 				row-gap: 28px;
-				label {
-					display: block;
-					font-size: 20px;
-					font-family: var(--body-font);
-					font-weight: var(--font-semi-bold);
+				@include mediaSM {
+					flex-direction: row;
+					column-gap: 25px;
 				}
-				.contact__input {
-					all: unset;
-					display: block;
-					width: 97%;
-					padding-block: 10px;
-					padding-left: 15px;
-					font-size: 14px;
-					font-family: var(--body-font);
-					border: none;
-					border-bottom: 3px solid var(--first-color-dark);
+				.input__container {
+					@include mediaSM {
+						flex: 1;
+					}
+					label {
+						display: block;
+						font-size: 20px;
+						font-family: var(--body-font);
+						font-weight: var(--font-semi-bold);
+					}
+					.contact__input {
+						all: unset;
+						display: block;
+						width: 97%;
+						padding-block: 10px;
+						padding-left: 15px;
+						font-size: 14px;
+						font-family: var(--body-font);
+						border: none;
+						border-bottom: 3px solid var(--first-color-dark);
+					}
 				}
 			}
 			.message__container {
@@ -51,21 +92,63 @@
 					border-bottom: 3px solid var(--first-color-dark);
 					height: 145px;
 					transition: 150ms linear;
+					@include mediaMD {
+						height: 70px;
+					}
+					@include mediaLG {
+						height: 150px;
+					}
 				}
 			}
 			.contact__button {
 				width: 100%;
 			}
 		}
+		.contact__image {
+			display: none;
+			@include mediaMD {
+				display: inline-block;
+				width: 450px;
+			}
+			@include mediaLG {
+				width: initial;
+			}
+		}
 	}
+
+	.flex__info-content {
+		@include mediaLG {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			column-gap: 60px;
+			margin-top: 60px;
+		}
+	}
+
 	.flex__info {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		margin-top: 50px;
 		row-gap: 25px;
+		@include mediaXS {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 40px;
+			align-items: center;
+			justify-content: center;
+		}
+		@include mediaMD {
+			margin-top: 60px;
+		}
+		@include mediaLG {
+			margin-top: 0;
+			justify-content: start;
+		}
 		.info {
 			width: 200px;
+			height: 190px;
 			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 			border-radius: 25px;
 			padding: 20px 20px;
@@ -94,12 +177,35 @@
 	}
 	.social {
 		margin-top: 50px;
+		@include mediaSM {
+			margin-top: 60px;
+		}
+		@include mediaLG {
+			margin-top: 0;
+		}
+		.section__title {
+			@include mediaXS {
+				font-size: 35px;
+			}
+			@include mediaLG {
+				margin-top: 0;
+			}
+			&::after,
+			&::before {
+				@include mediaLG {
+					display: none;
+				}
+			}
+		}
 		.flex__social {
 			margin-top: 60px;
 			display: flex;
 			flex-direction: column;
 			row-gap: 25px;
 			align-items: center;
+			@include mediaLG {
+				margin-top: 20px;
+			}
 			.flex__social-icons {
 				display: flex;
 				column-gap: 30px;
@@ -107,11 +213,11 @@
 				align-items: center;
 				list-style: none;
 				a {
-          &:hover i {
-            transform: scale(1.4);
-          }
+					&:hover i {
+						transform: scale(1.4);
+					}
 					i {
-            transition: 150ms linear;
+						transition: 150ms linear;
 						font-size: 42px;
 					}
 				}
