@@ -4,6 +4,10 @@
 	@include mediaXXS {
 		padding-inline: 10px;
 	}
+	@include mediaXS {
+		width: 580px;
+		margin-inline: auto;
+	}
 	@include mediaSM {
 		width: 720px;
 		margin-inline: auto;
