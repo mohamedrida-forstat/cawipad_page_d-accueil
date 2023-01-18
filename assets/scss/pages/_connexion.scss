@@ -7,11 +7,24 @@
 		@include mediaMD {
 			font-size: 50px;
 		}
+		@include mediaLG {
+			text-align: start;
+			width: initial;
+			font-size: 54px;
+			margin-bottom: 0;
+			&::after,
+			&::before {
+				display: none;
+			}
+		}
 	}
 	.flex__connexion {
 		@include mediaSM {
 			display: flex;
 			column-gap: 30px;
+		}
+		@include mediaLG {
+			column-gap: 60px;
 		}
 		.form__container {
 			@include mediaSM {
@@ -22,12 +35,18 @@
 			}
 			.connexion__form {
 				margin-top: 75px;
+				@include mediaLG {
+					margin-top: 50px;
+				}
 				.input__container {
 					display: flex;
 					flex-direction: column-reverse;
 					margin-bottom: 30px;
 					@include mediaSM {
 						margin-bottom: 20px;
+					}
+					@include mediaLG {
+						margin-bottom: 25px;
 					}
 					label {
 						width: max-content;
@@ -45,6 +64,9 @@
 						@include mediaSM {
 							font-size: 20px;
 						}
+						@include mediaLG {
+							font-size: 22px;
+						}
 					}
 					input {
 						all: unset;
@@ -61,6 +83,10 @@
 						@include mediaSM {
 							height: 55px;
 						}
+						@include mediaLG {
+							height: 65px;
+							font-size: 20px;
+						}
 						&:is(:focus) {
 							border-color: var(--first-color-base);
 							color: var(--first-color-very-dark);
@@ -71,6 +97,9 @@
 					}
 				}
 				.input__container-save {
+					@include mediaLG {
+						margin-top: 30px;
+					}
 					// ====== START CHANGE ALL THE CHECKBOX DESIGN ============
 					[type='checkbox']:checked,
 					[type='checkbox']:not(:checked) {
@@ -128,6 +157,9 @@
 						@include mediaSM {
 							font-size: 16px;
 						}
+						@include mediaLG {
+							font-size: 20px;
+						}
 					}
 				}
 				.connexion__form-btn {
@@ -143,6 +175,10 @@
 						font-size: 18px;
 						margin-top: 35px;
 					}
+					@include mediaLG {
+						margin-top: 50px;
+						font-size: 20px;
+					}
 				}
 			}
 			.links__container {
@@ -150,6 +186,10 @@
 				flex-direction: column;
 				row-gap: 15px;
 				margin-top: 45px;
+				@include mediaLG {
+					margin-top: 70px;
+					row-gap: 20px;
+				}
 				.connexion__link {
 					font-family: var(--body-font);
 					font-size: 16px;
@@ -157,10 +197,16 @@
 					text-transform: uppercase;
 					transition: 150ms linear;
 					@include mediaSM {
+						text-align: start;
 						&:hover {
 							padding-left: 15px;
 						}
-						text-align: start;
+					}
+					@include mediaLG {
+						font-size: 20px;
+						&:hover {
+							color: var(--first-color-dark);
+						}
 					}
 				}
 			}
@@ -171,6 +217,9 @@
 				display: block;
 				align-self: flex-end;
 				position: relative;
+			}
+			@include mediaLG {
+				align-self: flex-start;
 			}
 			.social__media-icons {
 				display: none;
@@ -187,11 +236,18 @@
 					top: initial;
 					right: 40px;
 				}
+				@include mediaLG {
+					top: 50px;
+					right: 58px;
+				}
 				a {
 					font-size: 32px;
 					transition: 150ms linear;
 					@include mediaMD {
 						font-size: 42px;
+					}
+					@include mediaLG {
+						font-size: 45px;
 					}
 				}
 				.facebook:hover {
@@ -213,6 +269,9 @@
 				@include mediaMD {
 					width: 410px;
 				}
+				@include mediaLG {
+					width: 560px;
+				}
 			}
 		}
 	}
@@ -222,6 +281,9 @@
 		@include mediaSM {
 			display: flex;
 		}
+		@include mediaLG {
+			display: none;
+		}
 	}
 
 	.social {
@@ -230,7 +292,7 @@
 			margin-top: 60px;
 		}
 		@include mediaLG {
-			margin-top: 0;
+			display: none;
 		}
 		.section__title {
 			font-size: 28px;

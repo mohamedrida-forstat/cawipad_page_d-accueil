@@ -2108,6 +2108,17 @@ header .nav__connexion {
     font-size: 50px;
   }
 }
+@media (min-width: 1200px) {
+  .connexion .section__title {
+    text-align: start;
+    width: initial;
+    font-size: 54px;
+    margin-bottom: 0;
+  }
+  .connexion .section__title::after, .connexion .section__title::before {
+    display: none;
+  }
+}
 @media (min-width: 769px) {
   .connexion .flex__connexion {
     display: -webkit-box;
@@ -2116,6 +2127,13 @@ header .nav__connexion {
     -webkit-column-gap: 30px;
        -moz-column-gap: 30px;
             column-gap: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .connexion .flex__connexion {
+    -webkit-column-gap: 60px;
+       -moz-column-gap: 60px;
+            column-gap: 60px;
   }
 }
 @media (min-width: 769px) {
@@ -2131,6 +2149,11 @@ header .nav__connexion {
 .connexion .flex__connexion .form__container .connexion__form {
   margin-top: 75px;
 }
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .form__container .connexion__form {
+    margin-top: 50px;
+  }
+}
 .connexion .flex__connexion .form__container .connexion__form .input__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2144,6 +2167,11 @@ header .nav__connexion {
 @media (min-width: 769px) {
   .connexion .flex__connexion .form__container .connexion__form .input__container {
     margin-bottom: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .form__container .connexion__form .input__container {
+    margin-bottom: 25px;
   }
 }
 .connexion .flex__connexion .form__container .connexion__form .input__container label {
@@ -2168,6 +2196,11 @@ header .nav__connexion {
     font-size: 20px;
   }
 }
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .form__container .connexion__form .input__container label {
+    font-size: 22px;
+  }
+}
 .connexion .flex__connexion .form__container .connexion__form .input__container input {
   all: unset;
   position: relative;
@@ -2187,12 +2220,23 @@ header .nav__connexion {
     height: 55px;
   }
 }
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .form__container .connexion__form .input__container input {
+    height: 65px;
+    font-size: 20px;
+  }
+}
 .connexion .flex__connexion .form__container .connexion__form .input__container input:is(:focus) {
   border-color: var(--first-color-base);
   color: var(--first-color-very-dark);
 }
 .connexion .flex__connexion .form__container .connexion__form .input__container input:is(:focus) + label {
   color: var(--first-color-dark);
+}
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .form__container .connexion__form .input__container-save {
+    margin-top: 30px;
+  }
 }
 .connexion .flex__connexion .form__container .connexion__form .input__container-save [type=checkbox]:checked,
 .connexion .flex__connexion .form__container .connexion__form .input__container-save [type=checkbox]:not(:checked) {
@@ -2252,6 +2296,11 @@ header .nav__connexion {
     font-size: 16px;
   }
 }
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .form__container .connexion__form .input__container-save label {
+    font-size: 20px;
+  }
+}
 .connexion .flex__connexion .form__container .connexion__form .connexion__form-btn {
   width: 100%;
   height: 57px;
@@ -2268,6 +2317,12 @@ header .nav__connexion {
     margin-top: 35px;
   }
 }
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .form__container .connexion__form .connexion__form-btn {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+}
 .connexion .flex__connexion .form__container .links__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2278,6 +2333,12 @@ header .nav__connexion {
           flex-direction: column;
   row-gap: 15px;
   margin-top: 45px;
+}
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .form__container .links__container {
+    margin-top: 70px;
+    row-gap: 20px;
+  }
 }
 .connexion .flex__connexion .form__container .links__container .connexion__link {
   font-family: var(--body-font);
@@ -2295,6 +2356,14 @@ header .nav__connexion {
     padding-left: 15px;
   }
 }
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .form__container .links__container .connexion__link {
+    font-size: 20px;
+  }
+  .connexion .flex__connexion .form__container .links__container .connexion__link:hover {
+    color: var(--first-color-dark);
+  }
+}
 .connexion .flex__connexion .image__container {
   display: none;
 }
@@ -2304,6 +2373,12 @@ header .nav__connexion {
     -ms-flex-item-align: end;
         align-self: flex-end;
     position: relative;
+  }
+}
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .image__container {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 }
 .connexion .flex__connexion .image__container .social__media-icons {
@@ -2331,6 +2406,12 @@ header .nav__connexion {
     right: 40px;
   }
 }
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .image__container .social__media-icons {
+    top: 50px;
+    right: 58px;
+  }
+}
 .connexion .flex__connexion .image__container .social__media-icons a {
   font-size: 32px;
   -webkit-transition: 150ms linear;
@@ -2339,6 +2420,11 @@ header .nav__connexion {
 @media (min-width: 992px) {
   .connexion .flex__connexion .image__container .social__media-icons a {
     font-size: 42px;
+  }
+}
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .image__container .social__media-icons a {
+    font-size: 45px;
   }
 }
 .connexion .flex__connexion .image__container .social__media-icons .facebook:hover {
@@ -2364,6 +2450,11 @@ header .nav__connexion {
     width: 410px;
   }
 }
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .image__container .connexion__image {
+    width: 560px;
+  }
+}
 .connexion .flex__info {
   display: none;
 }
@@ -2372,6 +2463,11 @@ header .nav__connexion {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+@media (min-width: 1200px) {
+  .connexion .flex__info {
+    display: none;
   }
 }
 .connexion .social {
@@ -2384,7 +2480,7 @@ header .nav__connexion {
 }
 @media (min-width: 1200px) {
   .connexion .social {
-    margin-top: 0;
+    display: none;
   }
 }
 .connexion .social .section__title {
