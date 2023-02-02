@@ -1,7 +1,4 @@
-::selection {
-	background-color: var(--first-color-very-dark);
-	color: white;
-}
+
 .contact {
 	color: #2f2e41;
 	padding-block: 2rem;
@@ -192,7 +189,7 @@
 	}
 }
 
-.flex__info {
+.flex__contact-info {
 	display: flex;
 	flex-direction: column;
 	align-items: center;

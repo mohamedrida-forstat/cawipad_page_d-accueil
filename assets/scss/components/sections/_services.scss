@@ -41,70 +41,47 @@
 			}
 			.image__container {
 				border-radius: 50%;
-				height: 270px;
-				width: 270px;
-				padding: 45px;
+				height: 180px;
+				width: 180px;
+				padding: 30px;
 				border: 1px solid var(--first-color-base);
 				margin: auto;
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				& img {
+					max-width: 100%;
+				}
 				@include mediaXXS {
-					width: 220px;
-					height: 220px;
-					& img {
-						max-width: 100%;
-					}
+					width: 150px;
+					height: 150px;
 				}
 				@include mediaSM {
-					width: 240px;
-					height: 240px;
-					& img {
-						max-width: 100%;
-					}
+					width: 180px;
+					height: 180px;
 				}
 				@include mediaMD {
 					width: 200px;
-					height: 200px;	
-				}
-				@include mediaLG {
-					width: 270px;
-					height: 270px;
+					height: 200px;
 				}
 			}
 			&__title {
-				font-size: 1.75rem;
+				font-size: 24px;
 				font-family: var(--body-font);
 				font-weight: var(--font-bold);
 				color: var(--first-color-base);
 				margin-top: 25px;
 				margin-bottom: 20px;
-				@include mediaXXS {
-					font-size: 1.5rem;
-				}
-				@include mediaMD {
+				@include mediaXS {
 					font-size: 26px;
-				}
-				@include mediaLG {
-					font-size: 28px;
 				}
 			}
 			&__paragraph {
-				font-size: 19px;
 				line-height: 26px;
 				letter-spacing: 0.02em;
 				font-family: var(--paragraph-font);
-				@include mediaXXS {
-					font-size: 18px;
-				}
 				@include mediaSM {
 					font-size: 18px;
-				}
-				@include mediaMD {
-					font-size: 16px;
-				}
-				@include mediaLG {
-					font-size: 19px;
 				}
 			}
 		}

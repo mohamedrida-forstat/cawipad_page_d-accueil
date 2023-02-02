@@ -34,14 +34,9 @@
 			column-gap: 40px;
 		}
 		.work {
-			background-color: white;
+			background-color: var(--first-color-dark);
 			padding: 25px;
 			box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.15);
-			transition: 300ms ease-in;
-			&:hover {
-				background-color: var(--first-color-base);
-				box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.3);
-			}
 			@include mediaXXS {
 				padding-inline: 10px;
 			}
@@ -97,6 +92,7 @@
 				left: 20px;
 				top: 20px;
 				display: none;
+				color: white;
 				@include mediaSM {
 					display: flex;
 				}
@@ -107,7 +103,7 @@
 				font-size: 22px;
 				text-align: center;
 				text-transform: uppercase;
-				color: var(--first-color-dark);
+				color: white;
 				letter-spacing: 0.03em;
 				margin-bottom: 25px;
 				line-height: 32px;
@@ -127,9 +123,6 @@
 					font-size: 24px;
 				}
 			}
-			&:hover .work__title {
-				color: black;
-			}
 			&__image {
 				margin-inline: auto;
 				display: block;
@@ -148,8 +141,10 @@
 			&__paragraph {
 				text-align: center;
 				font-family: var(--paragraph-font);
+				font-weight: var(--font-medium);
 				line-height: 32px;
 				letter-spacing: 0.02em;
+				color: white;
 				@include mediaSM {
 					font-size: 20px;
 				}

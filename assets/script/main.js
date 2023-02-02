@@ -17,36 +17,37 @@ function animateColor() {
 		item2.style.fill = palletColors['light-green'];
 		item3.style.fill = palletColors['light-pink'];
 		item4.style.fill = palletColors['light-grey'];
-	}, 800);
+	}, 600);
 	setTimeout(() => {
 		item1.style.fill = palletColors['light-green'];
 		item2.style.fill = palletColors['light-pink'];
 		item3.style.fill = palletColors['light-grey'];
-	}, 1600);
+	}, 1200);
 	setTimeout(() => {
 		item5.style.fill = palletColors['light-green'];
 		item1.style.fill = palletColors['light-pink'];
 		item2.style.fill = palletColors['light-grey'];
-	}, 2400);
+	}, 1800);
 	setTimeout(() => {
 		item4.style.fill = palletColors['light-green'];
 		item5.style.fill = palletColors['light-pink'];
 		item1.style.fill = palletColors['light-grey'];
-	}, 3200);
+	}, 2400);
 	setTimeout(() => {
 		item3.style.fill = palletColors['light-green'];
 		item4.style.fill = palletColors['light-pink'];
 		item5.style.fill = palletColors['light-grey'];
-	}, 4000);
+	}, 3000);
 }
 
 animateColor(); // to start the animation immediately after the page loaded
 
-setInterval(animateColor, 6000); // then do the animation every 7s
+setInterval(animateColor, 3000); // then do the animation every 7s
 
 // ======== SHOW / HIDE MOBILE MENU ============
 const showMenu = (toggleId, closeId, navId) => {
-	const toggle = document.getElementById(toggleId),
+	const body = document.body,
+		toggle = document.getElementById(toggleId),
 		close = document.getElementById(closeId),
 		nav = document.getElementById(navId);
 
@@ -54,9 +55,11 @@ const showMenu = (toggleId, closeId, navId) => {
 	if (toggle && nav && close) {
 		toggle.addEventListener('click', () => {
 			nav.classList.add('show-menu');
+			body.classList.add('overflow-hidden');
 		});
 		close.addEventListener('click', () => {
 			nav.classList.remove('show-menu');
+			body.classList.remove('overflow-hidden');
 		});
 	}
 };
@@ -77,7 +80,7 @@ function scrollHeader() {
 	const nav = document.getElementById('header');
 	// When the scroll is greater than 80 viewport height, make the box shadow to the header element
 	window.addEventListener('scroll', () => {
-		this.scrollY > 80
+		this.scrollY > 10
 			? nav.classList.add('scroll-header')
 			: nav.classList.remove('scroll-header');
 	});

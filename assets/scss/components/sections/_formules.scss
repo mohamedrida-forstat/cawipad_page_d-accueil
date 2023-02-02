@@ -1,11 +1,11 @@
 .formules {
-	background-color: var(--first-color-very-light);
+	background-color: var(--secondary-color-faded);
 	position: relative;
 	margin-top: 60px;
 	&::before,
 	&::after {
 		content: '';
-		background-color: var(--first-color-very-light);
+		background-color: var(--secondary-color-faded);
 		position: absolute;
 		width: 100%;
 		height: 50px;
@@ -19,6 +19,12 @@
 		bottom: -50px;
 		-webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
 		clip-path: polygon(0 0, 0 100%, 100% 0);
+	}
+	.section__title {
+		color: var(--secondary-color-base);
+		&::after {
+			background-color: var(--secondary-color-base);
+		}
 	}
 	.flex__formules {
 		margin-top: 60px;
@@ -46,39 +52,29 @@
 			box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
 			background-color: white;
 			padding: 30px 15px;
-			transition: 300ms ease-in;
-			&:nth-of-type(2) .formule__icon {
-				margin-left: 10px;
-			}
 			@include mediaMD {
 				flex: 1;
 			}
 			@include mediaLG {
 				padding-inline: 20px;
 			}
-			&:hover {
-				background-color: var(--first-color-dark);
+			&__icon {
+				display: block;
+				margin-inline: auto;
 			}
 			&__icon path {
-				transition: 300ms ease-in;
-			}
-			&:hover .formule__icon path {
-				stroke: white;
+				stroke: var(--secondary-color-base);
 			}
 			&__title {
 				margin-block: 20px;
 				font-size: 24px;
 				font-family: var(--body-font);
-				color: var(--first-color-dark);
+				color: var(--secondary-color-base);
 				font-weight: var(--font-semi-bold);
 				letter-spacing: 0.05em;
 				margin-left: 20px;
 				text-transform: capitalize;
 				transition: 300ms ease-in;
-			}
-			&:hover .formule__title,
-			&:hover .formule__paragraph {
-				color: white;
 			}
 			&__paragraph {
 				font-family: var(--paragraph-font);
@@ -94,8 +90,12 @@
 
 .formules__btn {
 	margin-top: 40px;
-	width: 265px;
 	margin-inline: auto;
+	background-color: var(--secondary-color-base);
+	border: 2px solid var(--secondary-color-base);
+	&:hover {
+		background-color: var(--secondary-color-dark);
+	}
 	@include mediaSM {
 		margin-top: 60px;
 	}

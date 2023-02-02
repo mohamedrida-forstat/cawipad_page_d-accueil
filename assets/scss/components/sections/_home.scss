@@ -9,7 +9,7 @@
 		margin-top: 60px;
 	}
 	@include mediaLG {
-		margin-top: 30px;
+		margin-top: 100px;
 	}
 	.flex__home {
 		display: flex;
@@ -29,7 +29,8 @@
 		font-size: 2.25rem;
 		font-weight: var(--font-bold);
 		font-family: var(--title-font);
-		margin-bottom: 20px;
+		margin-bottom: 8px;
+		margin-top: 0;
 		@include mediaSM {
 			font-size: 3.625rem;
 		}
@@ -38,43 +39,58 @@
 		}
 		@include mediaLG {
 			font-size: 52px;
-			line-height: 65px;
 			margin-top: 0;
+		}
+	}
+	&__subtitle {
+		font-family: var(--title-font);
+		font-weight: var(--font-bold);
+		font-size: 20px;
+		color: var(--first-color-base);
+		margin-top: 0;
+		@include mediaXS {
+			font-size: 24px;
+		}
+		@include mediaSM {
+			font-size: 26px;
+		}
+		@include mediaMD {
+			margin-bottom: 20px;
+		}
+	}
+	&__image-mobile {
+		width: 80%;
+		margin-block: 25px;
+		@include mediaXS {
+			width: 65%;
+		}
+		@include mediaSM {
+			width: 70%;
+			margin-block: 30px;
+		}
+		@include mediaMD {
+			display: none;
 		}
 	}
 	&__paragraph {
 		font-size: 1rem;
 		font-family: var(--body-font);
-		line-height: 32px;
+		font-weight: var(--font-medium);
+		line-height: 1.5;
+		text-align: start;
+		&:not(:last-of-type) {
+			margin-bottom: 10px;
+		}
 		@include mediaSM {
 			font-size: 25px;
-			line-height: 52px;
 		}
 		@include mediaMD {
 			font-size: 18px;
-			line-height: 38px;
-		}
-		@include mediaLG {
-			font-size: 20px;
-			line-height: 40px;
 		}
 	}
-	&__buttons {
-		column-gap: 25px;
-		margin-top: 20px;
-		margin-inline: auto;
-		width: max-content;
-		@include mediaXXS {
-			flex-direction: column;
-			row-gap: 20px;
-		}
-		@include mediaSM {
-			margin-top: 35px;
-		}
-		@include mediaMD {
-			column-gap: 20px;
-			margin-inline: initial;
-		}
+	&__btn {
+		margin-top: 25px;
+		padding-block: 10px;
 	}
 	&__image {
 		height: 440px;
@@ -84,7 +100,7 @@
 		}
 		@include mediaLG {
 			height: initial;
-			width: 595px;
+			width: 500px;
 		}
 	}
 }

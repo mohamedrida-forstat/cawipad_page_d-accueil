@@ -1,6 +1,4 @@
 .button {
-	width: 185px;
-	height: 50px;
 	background-color: var(--first-color-dark);
 	border: 2px solid var(--first-color-dark);
 	border-radius: 35px;
@@ -11,36 +9,34 @@
 	font-weight: var(--font-semi-bold);
 	color: var(--color-white);
 	font-family: var(--body-font);
-	transition: 300ms ease-in;
+	transition: 150ms linear;
+	padding: 14px 35px;
+	width: fit-content;
 	&:hover {
-		box-shadow: var(--btn-shadow);
+		background-color: var(--first-color-very-dark);
 	}
 	@include mediaSM {
-		width: 260px;
-		height: 57px;
 		font-size: 20px;
 	}
 	@include mediaMD {
-		width: 180px;
-		height: 50px;
 		font-size: 16px;
 	}
 	@include mediaLG {
-		width: 215px;
-		height: 55px;
 		font-size: 18px;
 	}
 }
 .alt {
 	background-color: transparent;
 	color: var(--first-color-dark);
-	@include mediaMD {
-		width: 200px;
+	&:hover {
+		background-color: var(--first-color-dark);
+		color: white;
 	}
-	@include mediaLG {
-		width: 220px;
+	&:hover i {
+		color: white;
 	}
 	i {
+		transition: 150ms linear;
 		font-size: 1.75rem;
 		margin-right: 8px;
 		@include mediaSM {

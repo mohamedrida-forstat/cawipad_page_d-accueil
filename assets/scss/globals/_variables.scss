@@ -5,6 +5,7 @@
 	--first-color-base: #9cc69b;
 	--first-color-light: #c0e7be;
 	--first-color-very-light: #fbfffa;
+	--first-color-faded: #fbfffa;
 	--color-white: #fff;
 
 	// rgb linear gradient
@@ -12,7 +13,12 @@
 	--first-color-rgb-dark: rgba(117, 165, 117, 0.65);
 
 	// secondary color
-	--secondary-color-light: #ffb3ff;
+	--secondary-color-very-dark: #9a24a0;
+	--secondary-color-dark: #b737b7;
+	--secondary-color-base: #d354ca;
+	--secondary-color-light: #ea75e2;
+	--secondary-color-very-light: #ffb3ff;
+	--secondary-color-faded: #ffe6ff;
 
 	// footer color
 	--footer-color: #325733;
@@ -27,6 +33,7 @@
 	--paragraph-font: 'Karma', serif;
 
 	//========== Font weight ==========
+	--font-medium: 500;
 	--font-semi-bold: 600;
 	--font-bold: 700;
 
