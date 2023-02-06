@@ -29,14 +29,15 @@
 			justify-content: center;
 			margin-top: 100px;
 		}
-		@include mediaLG {
-			grid-template-columns: repeat(2, 550px);
-			column-gap: 40px;
+		@include mediaMD {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 25px 20px;
 		}
 		.work {
 			background-color: var(--first-color-dark);
 			padding: 25px;
 			box-shadow: 0px 0px 6px 6px rgba(0, 77, 1, 0.15);
+			overflow: hidden;
 			@include mediaXXS {
 				padding-inline: 10px;
 			}
@@ -46,36 +47,80 @@
 				position: relative;
 				&:first-of-type .work__title {
 					margin-top: 10px;
+					@include mediaSM {
+						width: 625px;
+					}
+					@include mediaMD {
+						width: initial;
+						text-align: right;
+					}
 					@include mediaLG {
-						width: 550px;
+						text-align: center;
+						margin-left: 70px;
+					}
+				}
+				&:first-of-type .work__image {
+					@include mediaMD {
+						width: 315px;
+					}
+				}
+				&:nth-of-type(2) .work__title {
+					width: 445px;
+					@include mediaLG {
+						margin-left: 45px;
+					}
+				}
+				&:nth-of-type(2) .work__image {
+					@include mediaMD {
+						width: 245px;
 					}
 				}
 				&:first-of-type .work__image {
 					@include mediaLG {
 						height: initial;
-						width: 390px;
 					}
 				}
 				&:nth-of-type(3) .work__title {
 					@include mediaSM {
 						width: 400px !important;
 					}
+					@include mediaMD {
+						width: 300px !important;
+						margin-left: 65px;
+					}
 					@include mediaLG {
-						text-indent: 40px;
-						width: 420px !important;
+						width: initial !important;
+						margin-left: 60px;
 					}
 				}
 				&:nth-of-type(3) .work__image {
-					width: 315px;
+					width: 335px;
 					height: initial;
+					@include mediaMD {
+						width: 250px;
+					}
+					@include mediaLG {
+						width: 280px;
+					}
 				}
 				&:last-of-type .work__title {
+					@include mediaMD {
+						width: 325px;
+						margin-right: initial;
+						margin-left: auto;
+					}
 					@include mediaLG {
-						margin-left: 20px;
+						width: 410px;
+						margin-left: 65px;
+					}
+				}
+				&:last-of-type .work__image {
+					@include mediaMD {
+						width: 250px;
 					}
 				}
 			}
-			@include mediaLG {
+			@include mediaMD {
 				width: initial;
 			}
 			&__number {
@@ -119,6 +164,10 @@
 					width: 505px;
 					margin-inline: auto;
 				}
+				@include mediaMD {
+					width: initial;
+					font-size: 20px;
+				}
 				@include mediaLG {
 					font-size: 24px;
 				}
@@ -132,10 +181,17 @@
 					height: 180px;
 					margin-bottom: 15px;
 				}
+				@include mediaXS {
+					width: 70%;
+				}
 				@include mediaSM {
 					width: 359px;
 					height: 262px;
 					margin-bottom: 30px;
+				}
+				@include mediaMD {
+					width: 200px;
+					height: inherit;
 				}
 			}
 			&__paragraph {
@@ -147,6 +203,9 @@
 				color: white;
 				@include mediaSM {
 					font-size: 20px;
+				}
+				@include mediaMD {
+					font-size: 15px;
 				}
 				@include mediaLG {
 					font-size: 18px;
@@ -160,6 +219,9 @@
 					letter-spacing: 0.02em;
 				}
 			}
+		}
+		@include mediaMD {
+			width: initial;
 		}
 	}
 }

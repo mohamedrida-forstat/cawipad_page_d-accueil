@@ -9,8 +9,12 @@
 	--color-white: #fff;
 
 	// rgb linear gradient
-	--first-color-rgb-very-dark: rgba(77, 132, 78, 0.65);
-	--first-color-rgb-dark: rgba(117, 165, 117, 0.65);
+	// For Mobile
+	--first-color-rgb-very-dark-mobile: rgba(77, 132, 78, 0.85);
+	--first-color-rgb-dark-mobile: rgba(117, 165, 117, 0.85);
+	// // For Desktop
+	--first-color-rgb-very-dark: rgba(77, 132, 78, 0.75);
+	--first-color-rgb-dark: rgba(117, 165, 117, 0.75);
 
 	// secondary color
 	--secondary-color-very-dark: #9a24a0;

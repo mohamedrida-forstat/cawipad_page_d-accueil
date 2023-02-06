@@ -13,30 +13,38 @@
 		row-gap: 20px;
 		@include mediaSM {
 			margin-top: 70px;
-		}
-		@include mediaMD {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 25px 20px;
 		}
+		@include mediaMD {
+			gap: 25px 20px;
+		}
 		@include mediaLG {
+			grid-template-columns: repeat(2, auto);
+			justify-content: center;
 			gap: 45px 30px;
 		}
 		.aventage {
 			position: relative;
 			object-fit: cover;
-			height: 267px;
+			height: 200px;
+			overflow: hidden;
+			&:hover .aventage__img {
+				transform: scale(1.05);
+			}
 			@include mediaXS {
 				height: 375px;
 			}
 			@include mediaSM {
-				height: 495px;
+				height: 230px;
 			}
 			@include mediaMD {
 				height: 300px;
 			}
 			@include mediaLG {
-				height: 400px;
+				width: 500px;
+				height: 350px;
 			}
 			.aventage__overlay {
 				position: absolute;
@@ -44,13 +52,21 @@
 				height: 100%;
 				background: linear-gradient(
 					250deg,
-					var(--first-color-rgb-very-dark) 24.25%,
-					var(--first-color-rgb-dark) 79.44%
+					var(--first-color-rgb-very-dark-mobile) 80%,
+					var(--first-color-rgb-dark-mobile) 90%
 				);
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				padding-inline: 10px;
+				z-index: 2;
+				@include mediaSM {
+					background: linear-gradient(
+						250deg,
+						var(--first-color-rgb-very-dark) 80%,
+						var(--first-color-rgb-dark) 90%
+					);
+				}
 				@include mediaLG {
 					padding-inline: 25px;
 				}
@@ -67,9 +83,14 @@
 					@include mediaXXS {
 						font-size: 19px;
 					}
-					@include mediaSM {
-						font-size: 24px;
+					@include mediaXS {
+						width: initial;
+						font-size: 26px;
 						line-height: 38px;
+					}
+					@include mediaSM {
+						font-size: 20px;
+						line-height: 30px;
 						width: 610px;
 					}
 					@include mediaMD {
@@ -85,6 +106,7 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				transition: 450ms linear;
 			}
 		}
 	}

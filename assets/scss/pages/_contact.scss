@@ -1,9 +1,9 @@
 
 .contact {
 	color: #2f2e41;
-	padding-block: 2rem;
+	padding-block: 4rem;
 	@include mediaLG {
-		padding-block: 4rem;
+		padding-block: 8rem;
 	}
 	.section__title {
 		font-size: 32px;

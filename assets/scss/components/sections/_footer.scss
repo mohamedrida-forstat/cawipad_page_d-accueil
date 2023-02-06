@@ -76,7 +76,9 @@
 			transition: 150ms linear;
 		}
 		.footer_links .flex__info:hover p {
-			padding-left: 10px;
+			@include mediaLG {
+				padding-left: 10px;
+			}
 		}
 		.footer_links .flex__info {
 			transition: 150ms linear;
