@@ -5,17 +5,24 @@
 		padding-inline: 25px;
 	}
 	@include mediaXS {
-		width: 580px;
+		max-width: 580px;
 		margin-inline: auto;
 	}
 	@include mediaSM {
-		width: 720px;
+		max-width: 720px;
 		margin-inline: auto;
 	}
 	@include mediaMD {
-		width: 960px;
+		max-width: 960px;
 	}
 	@include mediaLG {
-		width: 1140px;
+		max-width: 1140px;
+	}
+	@include mediaXLG {
+		max-width: 1320px;
+		width: fit-content;
+	}
+	@include mediaXXLG {
+		max-width: 2000px;
 	}
 }

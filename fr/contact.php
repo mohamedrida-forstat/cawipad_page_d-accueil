@@ -10,6 +10,9 @@
 		<title>Cawipad Contact page</title>
 	</head>
 	<body>
+
+		
+
 		<main class="contact">
 			<div class="container">
 				<h1 class="section__title">Nous contacter</h1>
@@ -55,66 +58,6 @@
 						alt="contact-image"
 					/>
 				</section>
-
-				<div class="flex__info-content">
-					<!-- ========== CONTACT INFORMATION SECTION ============= -->
-					<section class="flex__contact-info">
-						<article class="info">
-							<img
-								src="../assets/svg/contact/location.svg"
-								class="info__icon"
-								alt="location-icon"
-							/>
-							<h3 class="info__title">Location</h3>
-							<p class="info__paragraph">
-								6 Avenue Gambetta, 92160 Antony, France
-							</p>
-						</article>
-						<article class="info">
-							<img
-								src="../assets/svg/contact/phone.svg"
-								class="info__icon"
-								alt="location-icon"
-							/>
-							<h3 class="info__title">Télephone</h3>
-							<p class="info__paragraph">01 48 25 19 51</p>
-						</article>
-						<article class="info">
-							<img
-								src="../assets/svg/contact/mail.svg"
-								class="info__icon"
-								alt="location-icon"
-							/>
-							<h3 class="info__title">Website</h3>
-							<a href="#" class="info__paragraph"> www.dataoptique.fr </a>
-						</article>
-					</section>
-
-					<!-- ========== SOCIAL MEDIA SECTION ============= -->
-					<section class="social">
-						<h1 class="section__title">Suivez-nous</h1>
-						<div class="flex__social">
-							<ul class="flex__social-icons">
-								<li>
-									<a href="#" target="_blank" class="facebook">
-										<i class="fa fa-facebook-square" aria-hidden="true"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" target="_blank" class="instagram">
-										<i class="fa fa-instagram" aria-hidden="true"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" target="_blank" class="linkedin">
-										<i class="fa fa-linkedin-square" aria-hidden="true"></i>
-									</a>
-								</li>
-							</ul>
-							<p class="copyright">© Politique de confidentialité 2022</p>
-						</div>
-					</section>
-				</div>
 			</div>
 		</main>
 	</body>

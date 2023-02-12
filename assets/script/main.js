@@ -86,3 +86,11 @@ function scrollHeader() {
 	});
 }
 window.addEventListener('scroll', scrollHeader);
+
+
+// ========== AUTO LOAD FOOTER AND NAV WHEN DOWNLOADING =============
+// PERFORMANCE DEGRADE WITH THIS SCRIPT BETTER USING PUG.JS
+$(function(){
+	$("#header").load("header.html"); 
+	$("#footer").load("footer.html"); 
+  });

@@ -23,6 +23,9 @@
 		@include mediaLG {
 			flex: 1 0 500px;
 		}
+		@include mediaXLG {
+			flex: initial;	
+		}
 	}
 	&__title {
 		color: var(--first-color-very-dark);
@@ -101,6 +104,9 @@
 		@include mediaLG {
 			height: initial;
 			width: 500px;
+		}
+		@include mediaXLG {
+			width: fit-content;	
 		}
 	}
 }

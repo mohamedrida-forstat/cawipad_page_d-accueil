@@ -46,6 +46,10 @@
 				width: 500px;
 				height: 350px;
 			}
+			@include mediaXLG {
+				width: initial;
+				height: initial;
+			}
 			.aventage__overlay {
 				position: absolute;
 				width: 100%;

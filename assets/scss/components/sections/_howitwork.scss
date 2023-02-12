@@ -69,6 +69,9 @@
 					@include mediaLG {
 						margin-left: 45px;
 					}
+					@include mediaXLG {
+						width: initial;
+					}
 				}
 				&:nth-of-type(2) .work__image {
 					@include mediaMD {
@@ -112,6 +115,9 @@
 					@include mediaLG {
 						width: 410px;
 						margin-left: 65px;
+					}
+					@include mediaXLG {
+						width: initial;
 					}
 				}
 				&:last-of-type .work__image {

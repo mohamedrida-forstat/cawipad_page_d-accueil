@@ -13,6 +13,9 @@ header {
 	background-color: white;
 	z-index: var(--z-fixed);
 	padding-block: 40px;
+	.container {
+		width: inherit;
+	}
 	.nav {
 		justify-content: space-between;
 		align-items: center;

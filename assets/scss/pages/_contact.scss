@@ -53,7 +53,8 @@
 					}
 					label {
 						display: block;
-						font-size: 20px;
+						font-size: 18px;
+						margin-bottom: 12px;
 						font-family: var(--body-font);
 						font-weight: var(--font-semi-bold);
 					}
@@ -61,19 +62,24 @@
 						all: unset;
 						display: block;
 						width: 97%;
-						padding-block: 10px;
+						margin-top: 3px;
+						padding-block: 12px;
+						border-radius: 5px;
 						padding-left: 15px;
 						font-size: 14px;
 						font-family: var(--body-font);
-						border: none;
-						border-bottom: 3px solid var(--first-color-dark);
+						border: 2px solid var(--first-color-dark);
+						&:is(:focus) {
+							background-color: var(--input-active-color);
+						}
 					}
 				}
 			}
 			.message__container {
 				label {
 					display: block;
-					font-size: 20px;
+					font-size: 18px;
+					margin-bottom: 12px;
 					font-family: var(--body-font);
 					font-weight: var(--font-semi-bold);
 				}
@@ -81,14 +87,16 @@
 					all: unset;
 					display: block;
 					width: 97%;
-					padding-block: 10px;
+					padding-block: 12px;
 					padding-left: 15px;
+					border-radius: 5px;
 					font-size: 14px;
 					font-family: var(--body-font);
-					border: none;
-					border-bottom: 3px solid var(--first-color-dark);
+					border: 2px solid var(--first-color-dark);
 					height: 145px;
-					transition: 150ms linear;
+					&:is(:focus) {
+						background-color: var(--input-active-color);
+					}
 					@include mediaMD {
 						height: 70px;
 					}

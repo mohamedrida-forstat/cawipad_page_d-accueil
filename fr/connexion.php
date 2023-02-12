@@ -81,7 +81,7 @@
 				</div>
 
 				<!-- ========== CONTACT INFORMATION SECTION ============= -->
-				<section class="flex__info">
+				<section class="flex__contact-info flex__info">
 					<article class="info">
 						<img
 							src="../assets/svg/contact/location.svg"

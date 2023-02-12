@@ -19,6 +19,7 @@
   --secondary-color-faded: #ffe6ff;
   --footer-color: #325733;
   --grey-color: #f2f2f2;
+  --input-active-color: #e8f0fe;
   --title-font: "Signika", sans-serif;
   --body-font: "Open Sans", sans-serif;
   --paragraph-font: "Karma", serif;
@@ -204,24 +205,37 @@ body.overflow-hidden {
 }
 @media (min-width: 620px) {
   .container {
-    width: 580px;
+    max-width: 580px;
     margin-inline: auto;
   }
 }
 @media (min-width: 769px) {
   .container {
-    width: 720px;
+    max-width: 720px;
     margin-inline: auto;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 960px;
+    max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1140px;
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media (min-width: 2300px) {
+  .container {
+    max-width: 2000px;
   }
 }
 
@@ -314,6 +328,9 @@ header {
   background-color: white;
   z-index: var(--z-fixed);
   padding-block: 40px;
+}
+header .container {
+  width: inherit;
 }
 header .nav {
   -webkit-box-pack: justify;
@@ -592,6 +609,13 @@ header .nav__connexion {
             flex: 1 0 500px;
   }
 }
+@media (min-width: 1400px) {
+  .home__content {
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+  }
+}
 .home__title {
   color: var(--first-color-very-dark);
   font-size: 2.25rem;
@@ -697,6 +721,13 @@ header .nav__connexion {
     width: 500px;
   }
 }
+@media (min-width: 1400px) {
+  .home__image {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 
 .about {
   margin-top: 60px;
@@ -779,6 +810,11 @@ header .nav__connexion {
     font-size: 18px;
   }
 }
+@media (min-width: 1400px) {
+  .about .flex__about .about__content .about__btn {
+    margin-left: 0;
+  }
+}
 .about .flex__about .about__content .about__btn i {
   margin-left: 8px;
   font-size: 15px;
@@ -828,6 +864,11 @@ header .nav__connexion {
     width: 580px;
     max-width: initial;
     height: 400px;
+  }
+}
+@media (min-width: 1400px) {
+  .about .flex__about .about__container .about__image {
+    height: initial;
   }
 }
 
@@ -936,6 +977,11 @@ header .nav__connexion {
     margin-left: 45px;
   }
 }
+@media (min-width: 769px) and (min-width: 1400px) {
+  .works .works__content .work:nth-of-type(2) .work__title {
+    width: initial;
+  }
+}
 @media (min-width: 769px) and (min-width: 992px) {
   .works .works__content .work:nth-of-type(2) .work__image {
     width: 245px;
@@ -990,6 +1036,11 @@ header .nav__connexion {
   .works .works__content .work:last-of-type .work__title {
     width: 410px;
     margin-left: 65px;
+  }
+}
+@media (min-width: 769px) and (min-width: 1400px) {
+  .works .works__content .work:last-of-type .work__title {
+    width: initial;
   }
 }
 @media (min-width: 769px) and (min-width: 992px) {
@@ -1492,6 +1543,12 @@ header .nav__connexion {
     height: 350px;
   }
 }
+@media (min-width: 1400px) {
+  .aventages .flex__aventages .aventage {
+    width: initial;
+    height: initial;
+  }
+}
 .aventages .flex__aventages .aventage .aventage__overlay {
   position: absolute;
   width: 100%;
@@ -1905,7 +1962,8 @@ header .nav__connexion {
 }
 .contact .flex__contact .contact__form .flex__input .input__container label {
   display: block;
-  font-size: 20px;
+  font-size: 18px;
+  margin-bottom: 12px;
   font-family: var(--body-font);
   font-weight: var(--font-semi-bold);
 }
@@ -1913,16 +1971,21 @@ header .nav__connexion {
   all: unset;
   display: block;
   width: 97%;
-  padding-block: 10px;
+  margin-top: 3px;
+  padding-block: 12px;
+  border-radius: 5px;
   padding-left: 15px;
   font-size: 14px;
   font-family: var(--body-font);
-  border: none;
-  border-bottom: 3px solid var(--first-color-dark);
+  border: 2px solid var(--first-color-dark);
+}
+.contact .flex__contact .contact__form .flex__input .input__container .contact__input:is(:focus) {
+  background-color: var(--input-active-color);
 }
 .contact .flex__contact .contact__form .message__container label {
   display: block;
-  font-size: 20px;
+  font-size: 18px;
+  margin-bottom: 12px;
   font-family: var(--body-font);
   font-weight: var(--font-semi-bold);
 }
@@ -1930,15 +1993,16 @@ header .nav__connexion {
   all: unset;
   display: block;
   width: 97%;
-  padding-block: 10px;
+  padding-block: 12px;
   padding-left: 15px;
+  border-radius: 5px;
   font-size: 14px;
   font-family: var(--body-font);
-  border: none;
-  border-bottom: 3px solid var(--first-color-dark);
+  border: 2px solid var(--first-color-dark);
   height: 145px;
-  -webkit-transition: 150ms linear;
-  transition: 150ms linear;
+}
+.contact .flex__contact .contact__form .message__container .contact__message:is(:focus) {
+  background-color: var(--input-active-color);
 }
 @media (min-width: 992px) {
   .contact .flex__contact .contact__form .message__container .contact__message {
@@ -2157,14 +2221,14 @@ header .nav__connexion {
 }
 @media (min-width: 992px) {
   .connexion .section__title {
-    font-size: 50px;
+    font-size: 42px;
   }
 }
 @media (min-width: 1200px) {
   .connexion .section__title {
     text-align: start;
     width: initial;
-    font-size: 54px;
+    font-size: 48px;
     margin-bottom: 0;
   }
   .connexion .section__title::after, .connexion .section__title::before {
@@ -2198,6 +2262,16 @@ header .nav__connexion {
     width: 480px;
   }
 }
+@media (min-width: 1200px) {
+  .connexion .flex__connexion .form__container {
+    width: -webkit-fill-available;
+  }
+}
+@media (min-width: 1400px) {
+  .connexion .flex__connexion .form__container {
+    width: 480px;
+  }
+}
 .connexion .flex__connexion .form__container .connexion__form {
   margin-top: 75px;
 }
@@ -2214,7 +2288,10 @@ header .nav__connexion {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+}
+.connexion .flex__connexion .form__container .connexion__form .input__container:last-of-type {
+  border-color: blue;
 }
 @media (min-width: 769px) {
   .connexion .flex__connexion .form__container .connexion__form .input__container {
@@ -2223,7 +2300,7 @@ header .nav__connexion {
 }
 @media (min-width: 1200px) {
   .connexion .flex__connexion .form__container .connexion__form .input__container {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 }
 .connexion .flex__connexion .form__container .connexion__form .input__container label {
@@ -2232,7 +2309,7 @@ header .nav__connexion {
   width: max-content;
   padding-inline: 5px;
   font-family: var(--body-font);
-  font-size: 22px;
+  font-size: 20px;
   font-style: italic;
   font-weight: var(--font-semi-bold);
   text-transform: uppercase;
@@ -2250,22 +2327,22 @@ header .nav__connexion {
 }
 @media (min-width: 1200px) {
   .connexion .flex__connexion .form__container .connexion__form .input__container label {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .connexion .flex__connexion .form__container .connexion__form .input__container input {
-  all: unset;
   position: relative;
-  width: 98%;
+  width: 100%;
   top: -10px;
   border: 2px solid #2f2e41;
   border-radius: 5px;
   padding-left: 15px;
   font-size: var(--body-font);
   font-size: 18px;
-  height: 60px;
-  -webkit-transition: 200ms linear;
-  transition: 200ms linear;
+  height: 55px;
+  -webkit-transition: 150ms linear;
+  transition: 150ms linear;
+  outline: none;
 }
 @media (min-width: 769px) {
   .connexion .flex__connexion .form__container .connexion__form .input__container input {
@@ -2274,8 +2351,8 @@ header .nav__connexion {
 }
 @media (min-width: 1200px) {
   .connexion .flex__connexion .form__container .connexion__form .input__container input {
-    height: 65px;
-    font-size: 20px;
+    height: 60px;
+    font-size: 18px;
   }
 }
 .connexion .flex__connexion .form__container .connexion__form .input__container input:is(:focus) {
@@ -2298,7 +2375,7 @@ header .nav__connexion {
 .connexion .flex__connexion .form__container .connexion__form .input__container-save [type=checkbox]:checked + label,
 .connexion .flex__connexion .form__container .connexion__form .input__container-save [type=checkbox]:not(:checked) + label {
   position: relative;
-  padding-left: 35px;
+  padding-left: 30px;
   cursor: pointer;
   line-height: 20px;
   display: inline-block;
@@ -2339,7 +2416,7 @@ header .nav__connexion {
   transform: scale(1);
 }
 .connexion .flex__connexion .form__container .connexion__form .input__container-save label {
-  font-size: 20px;
+  font-size: 16px;
   font-family: var(--body-font);
   text-transform: uppercase;
 }
@@ -2348,16 +2425,11 @@ header .nav__connexion {
     font-size: 16px;
   }
 }
-@media (min-width: 1200px) {
-  .connexion .flex__connexion .form__container .connexion__form .input__container-save label {
-    font-size: 20px;
-  }
-}
 .connexion .flex__connexion .form__container .connexion__form .connexion__form-btn {
   width: 100%;
-  height: 57px;
-  margin-top: 45px;
-  font-size: 20px;
+  height: 55px;
+  margin-top: 35px;
+  font-size: 18px;
   font-family: var(--body-font);
   font-weight: var(--font-semi-bold);
   text-transform: uppercase;
@@ -2389,16 +2461,17 @@ header .nav__connexion {
 @media (min-width: 1200px) {
   .connexion .flex__connexion .form__container .links__container {
     margin-top: 70px;
-    row-gap: 20px;
+    row-gap: 5px;
   }
 }
 .connexion .flex__connexion .form__container .links__container .connexion__link {
   font-family: var(--body-font);
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
   text-transform: uppercase;
   -webkit-transition: 150ms linear;
   transition: 150ms linear;
+  padding-block: 8px;
 }
 @media (min-width: 769px) {
   .connexion .flex__connexion .form__container .links__container .connexion__link {
@@ -2410,7 +2483,7 @@ header .nav__connexion {
 }
 @media (min-width: 1200px) {
   .connexion .flex__connexion .form__container .links__container .connexion__link {
-    font-size: 20px;
+    font-size: 16px;
   }
   .connexion .flex__connexion .form__container .links__container .connexion__link:hover {
     color: var(--first-color-dark);
@@ -2530,7 +2603,7 @@ header .nav__connexion {
     margin-top: 60px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .connexion .social {
     display: none;
   }

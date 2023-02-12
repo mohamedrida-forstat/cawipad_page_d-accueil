@@ -24,4 +24,14 @@
 		@content;
 	}
 }
+@mixin mediaXLG {
+	@media (min-width: 1400px) {
+		@content;
+	}
+}
+@mixin mediaXXLG {
+	@media (min-width: 2300px) {
+		@content;
+	}
+}
 // ======== End Media Queries Mixins ==========

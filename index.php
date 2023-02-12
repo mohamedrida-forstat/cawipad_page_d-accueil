@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="assets/css/normalize.css" />
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="assets/css/style.css" />
+		<script src="assets/script/jquery-3.6.0.min.js" defer></script>
 		<script src="assets/script/main.js" defer></script>
 	</head>
 	<body>
